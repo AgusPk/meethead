@@ -14,6 +14,14 @@ Start development environment of a workspace
 ```sh
 $ npm run start -w=<name-of-workspace>
 ```
+Current workspaces:
+
+backend
+@meethead/ui
+@meethead/app
+@meethead/extension
+
+
 Note: to start the extension workspace or the app, it is recommended to have the ui project running so you can see the changes you make in ui with hot reload.
 
 
