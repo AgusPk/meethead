@@ -21,7 +21,7 @@ const config = {
   mode: 'production',
   optimization: {
     emitOnErrors: false,
-    splitChunks:false,
+    splitChunks: false,
     runtimeChunk: false,
     minimize: true,
     minimizer: [

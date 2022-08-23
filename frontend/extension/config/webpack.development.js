@@ -15,7 +15,7 @@ const isUnspecifiedHost = HOST === '0.0.0.0' || HOST === '::';
 const prettyHost = isUnspecifiedHost ? 'localhost' : HOST;
 
 const config = {
-  entry: [],
+  entry: [...commonPaths.entryPoints],
   mode: 'development',
   devtool: 'cheap-module-source-map',
   devServer: {
