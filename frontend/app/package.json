@@ -41,7 +41,6 @@
     "docker:prod": "npm run docker:prod:build && npm run docker:prod:start",
     "docker:prod:build": "docker build -f docker/web/Dockerfile --target production -t app:production .",
     "docker:prod:start": "docker run --rm -it --network host -v $PWD:/usr/src/app app:production",
-    "prepare": "is-ci || husky install",
     "lint-staged": "lint-staged"
   },
   "lint-staged": {
@@ -104,7 +103,6 @@
     "eslint-plugin-react": "^7.30.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
-    "husky": "^8.0.1",
     "inject-html-webpack-plugin": "^1.0.1",
     "is-ci": "^3.0.1",
     "jest": "^28.1.1",
