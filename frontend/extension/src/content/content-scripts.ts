@@ -25,6 +25,15 @@ const messagesFromReactAppListener = (
   }
 };
 
+if (window.location.href.includes('https://www.linkedin.com/in')) {
+  const btn = document.createElement('button');
+  btn.innerHTML = 'Save';
+  btn.setAttribute('id', 'idButton');
+  btn.onclick = function () {
+    alert('Button is clicked');
+  };
+  document.body.appendChild(btn);
+}
 /**
  * Fired when a message is sent from either an extension process or a content script.
  */
