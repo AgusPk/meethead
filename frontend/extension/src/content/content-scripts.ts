@@ -1,5 +1,5 @@
 import { DOMMessage, DOMMessageResponse } from '../types';
-
+import './content-scripts.css';
 // Function called when a new message is received
 const messagesFromReactAppListener = (
   msg: DOMMessage,
@@ -27,12 +27,13 @@ const messagesFromReactAppListener = (
 
 if (window.location.href.includes('https://www.linkedin.com/in')) {
   const btn = document.createElement('button');
-  btn.innerHTML = 'Save';
+  btn.innerHTML = 'ADD TO POPR';
   btn.setAttribute('id', 'idButton');
   btn.onclick = function () {
     alert('Button is clicked');
   };
   document.body.appendChild(btn);
+  btn.classList.add('btn');
 }
 /**
  * Fired when a message is sent from either an extension process or a content script.

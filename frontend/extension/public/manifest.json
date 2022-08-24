@@ -14,7 +14,8 @@
   "content_scripts": [
     {
       "matches": ["https://www.linkedin.com/*"],
-      "js": ["./assets/js/content.bundle.js"]
+      "js": ["./assets/js/content.bundle.js"],
+      "css": ["./assets/css/content.5fa255c0a3601e3c5260.css"]
     }
   ]
 }

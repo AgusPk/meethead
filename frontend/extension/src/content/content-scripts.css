@@ -1,0 +1,15 @@
+.btn {
+  background: #e14c00;
+  position: sticky;
+  color: white;
+  padding: 1.8rem;
+  font-size: 1.8rem;
+  border-radius: 3rem;
+  left: calc(100% - 10%);
+  bottom: calc(100% - 20%);
+  z-index: 1;
+}
+
+.btn:hover {
+  background-color: #29abe2;
+}
