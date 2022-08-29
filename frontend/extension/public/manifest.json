@@ -10,12 +10,16 @@
   "icons": {
     "128": "favicon.ico"
   },
-  "permissions": ["activeTab"],
+  "permissions": ["activeTab", "webNavigation", "webRequest", "storage", "tabs"],
+  "host_permissions": ["http://www.linkedin.com/"],
+  "background": {
+    "service_worker": "worker-wrapper.js"
+  },
   "content_scripts": [
     {
       "matches": ["https://www.linkedin.com/*"],
       "js": ["./assets/js/content.bundle.js"],
-      "css": ["./assets/css/content.5fa255c0a3601e3c5260.css"]
+      "css": ["./assets/css/content.9b484566557db4e8d8d7.css"]
     }
   ]
 }

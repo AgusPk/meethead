@@ -23,6 +23,7 @@ module.exports = {
   template: path.resolve(__dirname, '..', 'public/index.html'),
   favicon: path.resolve(__dirname, '..', 'public/favicon.ico'),
   manifest: path.resolve(__dirname, '..', 'public/manifest.json'),
+  workerWrapper: path.resolve(__dirname, '..', 'public/worker-wrapper.js'),
   serviceWorker: path.resolve(__dirname, '..', 'src/', 'service-worker.ts'),
   contentScripts: path.resolve(__dirname, '..', 'src/content', 'content-scripts.ts'),
 };
