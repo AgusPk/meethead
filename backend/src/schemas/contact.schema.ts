@@ -18,7 +18,7 @@ export class Contact {
   logoS3Id: string;
 
   @Prop()
-  position: string;
+  companyPosition: string;
 
   @Prop()
   linkedInURL: string;
