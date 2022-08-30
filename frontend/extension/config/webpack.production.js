@@ -42,7 +42,7 @@ const config = {
       path: commonPaths.prodEnv,
     }),
     new MiniCssWebpackPlugin({
-      filename: 'assets/css/[name].[chunkhash].css',
+      filename: 'assets/css/[name].css',
       chunkFilename: 'assets/css/[id].[chunkhash].css',
     }),
     new HtmlWebpackPlugin({

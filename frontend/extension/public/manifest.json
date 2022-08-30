@@ -19,7 +19,7 @@
     {
       "matches": ["https://www.linkedin.com/*"],
       "js": ["./assets/js/content.bundle.js"],
-      "css": ["./assets/css/content.571b985b283e7f118d35.css"]
+      "css": ["./assets/css/content.css"]
     }
   ]
 }

@@ -4,3 +4,16 @@ export const getProfilePicture = () => document.querySelector(`img[alt="${name}"
 export const getCompany = () => document.getElementsByTagName('button')[12].children[1].innerText;
 export const getCompanyLogo = () => document.getElementsByTagName('button')[12].children[0].getAttribute('src');
 export const getPosition = () => document.getElementsByClassName('text-body-medium')[0].innerText;
+
+export const getLinkedinData = () => {
+  const linkedinProfile = {
+    id: getId(),
+    name: getName(),
+    profilePicture: getProfilePicture(),
+    company: getCompany(),
+    companyLogo: getCompanyLogo(),
+    position: getPosition(),
+  };
+  console.log(linkedinProfile);
+  return linkedinProfile;
+};

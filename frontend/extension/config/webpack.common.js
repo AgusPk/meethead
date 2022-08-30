@@ -19,8 +19,8 @@ const config = {
 
   entry: {
     main: commonPaths.entryPoints,
-    content: './src/content/content-scripts.ts',
-    background: './src/content/background.ts',
+    content: { import: './src/content/content-scripts.ts', filename: 'assets/js/[name].js' },
+    background: { import: './src/content/background.ts', filename: 'assets/js/[name].js' },
   },
   output: {
     filename: 'assets/js/[name].bundle.js',
