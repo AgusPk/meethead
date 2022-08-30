@@ -5,7 +5,7 @@ export type ContactDocument = Contact & Document;
 
 @Schema()
 export class Contact {
-  @Prop()
+  @Prop({ required: true })
   firstName: string;
 
   @Prop()
@@ -20,7 +20,7 @@ export class Contact {
   @Prop()
   companyPosition: string;
 
-  @Prop()
+  @Prop({ required: true })
   linkedInURL: string;
 }
 

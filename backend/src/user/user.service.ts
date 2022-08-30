@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { UserDocument, User, UserSchema } from 'src/schemas/user.schema';
+import { UserDocument, User } from 'src/user/schemas/user.schema';
 import { CreateContactDto } from './dto/create-contact.dto';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
@@ -13,8 +13,12 @@ export class UserService {
     private userModel: Model<UserDocument>,
   ) {}
 
-  async create(createUser: User): Promise<User> {
-    return await this.userModel.create(createUser);
+  async create(createUser: CreateUserDto): Promise<User> {
+    try {
+      return await this.userModel.create(createUser);
+    } catch {
+      throw new Error('Error creating user');
+    }
   }
 
   async findOne(id: string): Promise<User> {
@@ -30,8 +34,24 @@ export class UserService {
   }
 
   async createContact(userId: string, newContact: CreateContactDto) {
-    return await this.userModel.findByIdAndDelete(userId, {
-      $push: { contacts: newContact },
-    });
+    if (!userId || !newContact.firstName || !newContact.linkedInURL)
+      throw new Error('Error creating contact');
+    try {
+      return await this.userModel.findByIdAndUpdate(userId, {
+        $push: { contacts: newContact },
+      });
+    } catch {
+      throw new Error('Error creating contact');
+    }
+  }
+
+  async getContacts(userId: string) {
+    try {
+      if (!userId) throw new Error('Error getting contacts');
+      const user = await this.userModel.findById(userId);
+      return user.contacts;
+    } catch {
+      throw new Error('Error getting contacts');
+    }
   }
 }

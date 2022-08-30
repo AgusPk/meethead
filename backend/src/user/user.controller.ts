@@ -8,7 +8,7 @@ import {
   Delete,
 } from '@nestjs/common';
 import { UserService } from './user.service';
-import { User } from 'src/schemas/user.schema';
+import { User } from 'src/user/schemas/user.schema';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { CreateContactDto } from './dto/create-contact.dto';
@@ -19,7 +19,6 @@ export class UserController {
 
   @Post()
   async create(@Body() user: CreateUserDto): Promise<User> {
-    console.log(user);
     return this.userService.create(user);
   }
 
@@ -38,12 +37,16 @@ export class UserController {
     return this.userService.remove(id);
   }
 
-  @Post(':id/contacts')
+  @Post('/:id/contacts')
   async createContact(
     @Param('id') userId: string,
     @Body() contact: CreateContactDto,
   ): Promise<User> {
-    console.log(contact);
     return this.userService.createContact(userId, contact);
+  }
+
+  @Get('/:id/contacts')
+  async getContacts(@Param('id') userId: string): Promise<CreateContactDto[]> {
+    return this.userService.getContacts(userId);
   }
 }
