@@ -1,5 +1,5 @@
 try {
-  importScripts('./assets/js/background.bundle.js');
+  importScripts('./assets/js/background.js');
 } catch (error) {
   console.log(error);
 }
