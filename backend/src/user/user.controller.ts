@@ -11,8 +11,6 @@ import { UserService } from './user.service';
 import { User } from 'src/user/schemas/user.schema';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { CreateContactDto } from './dto/create-contact.dto';
-
 @Controller('user')
 export class UserController {
   constructor(private userService: UserService) {}
@@ -35,18 +33,5 @@ export class UserController {
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.userService.remove(id);
-  }
-
-  @Post('/:id/contacts')
-  async createContact(
-    @Param('id') userId: string,
-    @Body() contact: CreateContactDto,
-  ): Promise<User> {
-    return this.userService.createContact(userId, contact);
-  }
-
-  @Get('/:id/contacts')
-  async getContacts(@Param('id') userId: string): Promise<CreateContactDto[]> {
-    return this.userService.getContacts(userId);
   }
 }
