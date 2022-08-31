@@ -11,7 +11,6 @@ const mountButton = () => {
   };
   document.body.appendChild(btn);
   btn.classList.add('btn');
-  console.log('button created');
 };
 
 const isInLinkedinProfile = (request: any) =>
@@ -20,13 +19,11 @@ const isInLinkedinProfile = (request: any) =>
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   const poprButton = document.getElementById('poprIdButton');
   if (isInLinkedinProfile(request) && !poprButton) {
-    console.log('page rendered');
     // call method which gets fired as if new page is opened
     mountButton();
   }
   if (!isInLinkedinProfile(request) && poprButton) {
     poprButton.parentElement?.removeChild(poprButton);
-    console.log('button eliminated');
   }
   sendResponse({});
   return true;
