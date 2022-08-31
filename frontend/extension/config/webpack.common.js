@@ -19,7 +19,8 @@ const config = {
 
   entry: {
     main: commonPaths.entryPoints,
-    content: './src/content/content-scripts.ts',
+    content: { import: './src/content/content-scripts.ts', filename: 'assets/js/[name].js' },
+    background: { import: './src/content/background.ts', filename: 'assets/js/[name].js' },
   },
   output: {
     filename: 'assets/js/[name].bundle.js',
@@ -177,6 +178,14 @@ const config = {
         {
           from: commonPaths.manifest,
           to: 'manifest.json',
+        },
+      ],
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: commonPaths.workerWrapper,
+          to: 'worker-wrapper.js',
         },
       ],
     }),
