@@ -5,12 +5,18 @@ import 'i18n';
 import * as serviceWorker from 'service-worker';
 import reportWebVitals from 'report-web-vitals';
 import App from './App';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 const root = createRoot(document.getElementById('app') as HTMLElement);
+
+const queryClient = new QueryClient();
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <QueryClientProvider client={queryClient}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </QueryClientProvider>,
 );
 
 // If you want to start measuring performance in your app, pass a function
