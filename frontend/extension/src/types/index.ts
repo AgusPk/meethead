@@ -2,11 +2,11 @@ export type DOMMessage = {
   type: 'GET_DOM';
 };
 
-export type DOMMessageResponse = {
+export type LinkedinProfile = {
   name: string;
-  company: string;
-  profilePicture: string | undefined | null;
-  companyLogo: string | undefined | null;
-  id: string;
-  position: string;
+  companyName: string;
+  profilePictureUrl: string | undefined | null;
+  companyLogoUrl: string | undefined | null;
+  linkedInURL: string;
+  companyPosition: string;
 };

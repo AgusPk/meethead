@@ -2,6 +2,7 @@ import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { User } from 'src/user/schemas/user.schema';
 import { ContactsService } from './contacts.service';
 import { CreateContactDto } from './dto/create-contact.dto';
+import { ResponseContactDTO } from './dto/response-contact.dto';
 
 @Controller('contacts/')
 export class ContactsController {
@@ -16,7 +17,9 @@ export class ContactsController {
   }
 
   @Get(':id')
-  async getContacts(@Param('id') userId: string): Promise<CreateContactDto[]> {
+  async getContacts(
+    @Param('id') userId: string,
+  ): Promise<ResponseContactDTO[]> {
     return this.contactsService.getContacts(userId);
   }
 }

@@ -12,13 +12,20 @@ export class ContactsService {
   ) {}
 
   async createContact(userId: string, newContact: CreateContactDto) {
-    if (!userId || !newContact.firstName || !newContact.linkedInURL)
+    if (!userId || !newContact.name || !newContact.linkedInURL) {
       throw new Error('Error creating contact');
+    }
     try {
       return await this.userModel.findByIdAndUpdate(userId, {
-        $push: { contacts: newContact },
+        $push: {
+          contacts: {
+            ...newContact,
+            logoS3Id: newContact.companyLogoUrl,
+            profilePictureS3Id: newContact.profilePictureUrl,
+          },
+        },
       });
-    } catch {
+    } catch (error) {
       throw new Error('Error creating contact');
     }
   }
