@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import { DOMMessage, DOMMessageResponse } from './types';
+import { DOMMessage, LinkedinProfile } from './types';
 import { Header } from '@meethead/ui';
 
 function App() {
-  const [profile, setProfile] = React.useState<DOMMessageResponse | null>(null);
+  const [profile, setProfile] = React.useState<LinkedinProfile | null>(null);
   const [responseMessage, setMessage] = React.useState<string | null>(null);
 
   // React.useEffect(() => {

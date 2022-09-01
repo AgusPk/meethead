@@ -6,7 +6,7 @@ export type ContactDocument = Contact & Document;
 @Schema()
 export class Contact {
   @Prop({ required: true })
-  firstName: string;
+  name: string;
 
   @Prop()
   profilePictureS3Id: string;

@@ -14,12 +14,12 @@ export const getPosition = () => {
 
 export const getLinkedinData = () => {
   const linkedinProfile = {
-    id: getId(),
+    linkedInURL: getId(),
     name: getName(),
-    profilePicture: getProfilePicture(),
-    company: getCompany(),
-    companyLogo: getCompanyLogo(),
-    position: getPosition(),
+    profilePictureUrl: getProfilePicture(),
+    companyName: getCompany(),
+    companyLogoUrl: getCompanyLogo(),
+    companyPosition: getPosition(),
   };
   return linkedinProfile;
 };
