@@ -3,27 +3,27 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
-import Checkbox from "@mui/material/Checkbox";
 import Avatar from "@mui/material/Avatar";
-import List from "@mui/material/List";
+import { ContactCompanyList } from "./ContactCompanyList";
+import { ContactCheckbox } from "./ContactCheckbox";
 
 export const ContactListItem: FC<{
-  id: string;
   name: string;
-  profilePicture: string;
-  company: string;
-  companyLogo: string;
-  position: string;
+  profilePictureS3Id: string;
+  companyName: string;
+  logoS3Id: string;
+  companyPosition: string;
+  linkedInURL: string;
   index: number;
   checked: number[];
   onChange: any;
 }> = ({
-  id,
   name,
-  profilePicture,
-  company,
-  companyLogo,
-  position,
+  profilePictureS3Id,
+  companyName,
+  logoS3Id,
+  companyPosition,
+  linkedInURL,
   index,
   checked,
   onChange,
@@ -34,45 +34,36 @@ export const ContactListItem: FC<{
     setOpen(!open);
   };
 
-  const labelId = `checkbox-list-secondary-label-${id}`;
+  const labelId = `checkbox-list-secondary-label-${linkedInURL}`;
 
   return (
     <>
       <ListItem
-        key={id}
+        key={linkedInURL}
         secondaryAction={
-          <Checkbox
-            edge="end"
-            onChange={onChange(index)}
-            checked={checked.indexOf(index) !== -1}
-            inputProps={{ "aria-labelledby": labelId }}
+          <ContactCheckbox
+            index={index}
+            checked={checked}
+            onChange={onChange}
+            labelId={labelId}
           />
         }
         disablePadding
       >
         <ListItemButton onClick={handleClick}>
           <ListItemAvatar>
-            <Avatar alt={`Avatar n°${index + 1}`} src={profilePicture} />
+            <Avatar alt={`Avatar n°${index + 1}`} src={profilePictureS3Id} />
           </ListItemAvatar>
           <ListItemText id={labelId} primary={name} />
         </ListItemButton>
       </ListItem>
       {open && (
-        <List
-          component="div"
-          disablePadding
-          sx={{
-            width: "100%",
-            maxWidth: 300,
-            bgcolor: "background.paper",
-            marginLeft: "15px",
-          }}
-        >
-          <ListItem>
-            <Avatar src={companyLogo} />
-            <ListItemText primary={company} secondary={position} />
-          </ListItem>
-        </List>
+        <ContactCompanyList
+          companyName={companyName}
+          logoS3Id={logoS3Id}
+          companyPosition={companyPosition}
+          linkedInURL={linkedInURL}
+        />
       )}
     </>
   );
