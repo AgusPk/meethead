@@ -7,7 +7,7 @@ import { useQuery } from 'react-query';
 
 const Landing: FC = () => {
   const { t } = useTranslation(['config', 'translations']);
-  const { data: contacts } = useQuery(['getContacts'], async () => await getContacts('630f5ab683de04ee95a91285'));
+  const { data: contacts } = useQuery(['getContacts'], async () => await getContacts('63120fd98028831ecf43b444'));
 
   return (
     <FullWidthLayout>

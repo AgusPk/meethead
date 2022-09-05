@@ -7,7 +7,7 @@ import { UiContact } from "../types/UiContact";
 export const ContactList: FC<{ contacts: UiContact[] }> = ({ contacts }) => {
   const [checked, setChecked] = React.useState([1]);
 
-  const haveAnyContacts = contacts.length !== 0;
+  const haveAnyContacts = contacts?.length !== 0;
   const handleToggle = (value: any) => () => {
     const currentIndex = checked.indexOf(value);
     const newChecked = [...checked];
@@ -31,7 +31,7 @@ export const ContactList: FC<{ contacts: UiContact[] }> = ({ contacts }) => {
       }}
     >
       {haveAnyContacts ? (
-        contacts.map((contact, index) => {
+        contacts?.map((contact, index) => {
           return (
             <ContactListItem
               onChange={handleToggle}

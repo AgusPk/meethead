@@ -3,7 +3,7 @@ import './content-scripts.css';
 import { getLinkedinData } from './helpers';
 // Function called when a new message is received
 
-const CONTACTS_ENDPOINT = `${process.env.API_URL}/contacts/630e1928ff1f3882d139e838`;
+const CONTACTS_ENDPOINT = `${process.env.API_URL}/contacts/63120fd98028831ecf43b444`;
 
 const sendProfileToDb = async (profile: LinkedinProfile) => {
   try {
