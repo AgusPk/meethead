@@ -6,40 +6,26 @@ import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import { ContactCompanyList } from "./ContactCompanyList";
 import { ContactCheckbox } from "./ContactCheckbox";
+import { UiContact } from "../types/UiContact";
 
 export const ContactListItem: FC<{
-  name: string;
-  profilePictureS3Id: string;
-  companyName: string;
-  logoS3Id: string;
-  companyPosition: string;
-  linkedInURL: string;
+  contact: UiContact;
   index: number;
   checked: number[];
   onChange: any;
-}> = ({
-  name,
-  profilePictureS3Id,
-  companyName,
-  logoS3Id,
-  companyPosition,
-  linkedInURL,
-  index,
-  checked,
-  onChange,
-}) => {
+}> = ({ contact, index, checked, onChange }) => {
   const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
     setOpen(!open);
   };
 
-  const labelId = `checkbox-list-secondary-label-${linkedInURL}`;
+  const labelId = `checkbox-list-secondary-label-${contact.linkedInURL}`;
 
   return (
     <>
       <ListItem
-        key={linkedInURL}
+        key={contact.linkedInURL}
         secondaryAction={
           <ContactCheckbox
             index={index}
@@ -52,17 +38,20 @@ export const ContactListItem: FC<{
       >
         <ListItemButton onClick={handleClick}>
           <ListItemAvatar>
-            <Avatar alt={`Avatar n°${index + 1}`} src={profilePictureS3Id} />
+            <Avatar
+              alt={`Avatar n°${index + 1}`}
+              src={contact.profilePictureS3Id}
+            />
           </ListItemAvatar>
-          <ListItemText id={labelId} primary={name} />
+          <ListItemText id={labelId} primary={contact.name} />
         </ListItemButton>
       </ListItem>
       {open && (
         <ContactCompanyList
-          companyName={companyName}
-          logoS3Id={logoS3Id}
-          companyPosition={companyPosition}
-          linkedInURL={linkedInURL}
+          companyName={contact.companyName}
+          logoS3Id={contact.logoS3Id}
+          companyPosition={contact.companyPosition}
+          linkedInURL={contact.linkedInURL}
         />
       )}
     </>

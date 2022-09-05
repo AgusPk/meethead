@@ -37,7 +37,7 @@ export const ContactList: FC<{ contacts: UiContact[] }> = ({ contacts }) => {
               onChange={handleToggle}
               checked={checked}
               index={index}
-              {...contact}
+              contact={contact}
             />
           );
         })
