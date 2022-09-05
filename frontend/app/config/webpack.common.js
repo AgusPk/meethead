@@ -145,6 +145,7 @@ const config = {
       app: commonPaths.sourcePath,
       react: path.resolve(__dirname, '../', 'node_modules/react'),
       'app-assets': path.resolve(__dirname, '../', 'static/'),
+      '@mui/styled-engine': '@mui/styled-engine-sc',
     },
     modules: ['.', 'node_modules'],
   },

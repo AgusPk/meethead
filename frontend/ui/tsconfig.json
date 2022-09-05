@@ -6,6 +6,9 @@
     "allowSyntheticDefaultImports": true,
     "declaration": true
   },
+  "paths": {
+    "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"]
+  },
   "files": [],
   "include": [],
   "references": [

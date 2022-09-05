@@ -5,7 +5,8 @@
     "baseUrl": "src",
     "paths": {
       "app/*": ["../src/*"],
-      "app-assets/*": ["../static/*"]
+      "app-assets/*": ["../static/*"],
+      "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"]
     },
     "allowJs": true,
     "skipLibCheck": true,
