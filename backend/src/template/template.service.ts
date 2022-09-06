@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { CreateTemplateDto } from './dto/create-template.dto';
-import { UpdateTemplateDto } from './dto/update-template.dto';
+import { CreateTemplateDTO } from '@meethead/types';
+import { UpdateTemplateDTO } from './dto/update-template.dto';
 import { Template, TemplateDocument } from './schemas/template.schema';
 
 @Injectable()
@@ -12,7 +12,7 @@ export class TemplateService {
     private templateModel: Model<TemplateDocument>,
   ) {}
 
-  async createTemplate(template: CreateTemplateDto): Promise<Template> {
+  async createTemplate(template: CreateTemplateDTO): Promise<Template> {
     return await this.templateModel.create(template);
   }
 
@@ -24,7 +24,7 @@ export class TemplateService {
     return `This action returns a #${id} template`;
   }
 
-  update(id: string, updateTemplateDto: UpdateTemplateDto) {
+  update(id: string, updateTemplateDTO: UpdateTemplateDTO) {
     return `This action updates a #${id} template`;
   }
 

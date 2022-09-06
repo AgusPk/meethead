@@ -19,6 +19,13 @@ var CreateUserDTO = /** @class */ (function () {
     return CreateUserDTO;
 }());
 
+var CreateTemplateDTO = /** @class */ (function () {
+    function CreateTemplateDTO() {
+    }
+    return CreateTemplateDTO;
+}());
+
 exports.CreateContactDTO = CreateContactDTO;
+exports.CreateTemplateDTO = CreateTemplateDTO;
 exports.CreateUserDTO = CreateUserDTO;
 exports.ResponseContactDTO = ResponseContactDTO;
