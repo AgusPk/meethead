@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { User, UserDocument } from 'src/user/schemas/user.schema';
-import { CreateContactDto } from './dto/create-contact.dto';
+import { CreateContactDTO } from '@meethead/types';
 
 @Injectable()
 export class ContactsService {
@@ -11,7 +11,7 @@ export class ContactsService {
     private userModel: Model<UserDocument>,
   ) {}
 
-  async createContact(userId: string, newContact: CreateContactDto) {
+  async createContact(userId: string, newContact: CreateContactDTO) {
     if (!userId || !newContact.name || !newContact.linkedInURL) {
       throw new Error('Error creating contact');
     }
