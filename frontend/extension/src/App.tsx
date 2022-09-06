@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import { DOMMessage, LinkedinProfile } from './types';
+import { CreateContactDTO } from '@meethead/types';
 import { Header } from '@meethead/ui';
 
 function App() {
-  const [profile, setProfile] = React.useState<LinkedinProfile | null>(null);
+  const [profile, setProfile] = React.useState<CreateContactDTO | null>(null);
   const [responseMessage, setMessage] = React.useState<string | null>(null);
 
   // React.useEffect(() => {
@@ -72,13 +72,13 @@ function App() {
           <div className="SEOValidationField">
             <span className="SEOValidationFieldTitle">Company</span>
           </div>
-          <div className="SEOVAlidationFieldValue">{profile.company}</div>
+          <div className="SEOVAlidationFieldValue">{profile.companyName}</div>
         </li>
         <li className="SEOValidation">
           <div className="SEOValidationField">
             <span className="SEOValidationFieldTitle">Profile Picture</span>
           </div>
-          <img src={profile.profilePicture ?? undefined} alt="profile" />
+          <img src={profile.profilePictureUrl ?? undefined} alt="profile" />
         </li>
       </ul>
       <button onClick={sendItToDB}>Save it!</button>
