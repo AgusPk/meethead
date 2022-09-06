@@ -6,10 +6,10 @@ import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import { ContactCompanyList } from "./ContactCompanyList";
 import { ContactCheckbox } from "./ContactCheckbox";
-import { UiContact } from "../types/UiContact";
+import { ResponseContactDTO } from "@meethead/types";
 
 export const ContactListItem: FC<{
-  contact: UiContact;
+  contact: ResponseContactDTO;
   index: number;
   checked: number[];
   onChange: any;

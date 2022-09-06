@@ -1,8 +1,7 @@
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { User } from 'src/user/schemas/user.schema';
 import { ContactsService } from './contacts.service';
-import { CreateContactDto } from './dto/create-contact.dto';
-import { ResponseContactDTO } from './dto/response-contact.dto';
+import { CreateContactDTO, ResponseContactDTO } from '@meethead/types';
 
 @Controller('contacts/')
 export class ContactsController {
@@ -11,7 +10,7 @@ export class ContactsController {
   @Post(':id')
   async createContact(
     @Param('id') userId: string,
-    @Body() contact: CreateContactDto,
+    @Body() contact: CreateContactDTO,
   ): Promise<User> {
     return this.contactsService.createContact(userId, contact);
   }

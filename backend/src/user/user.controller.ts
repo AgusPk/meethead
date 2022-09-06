@@ -9,14 +9,14 @@ import {
 } from '@nestjs/common';
 import { UserService } from './user.service';
 import { User } from 'src/user/schemas/user.schema';
-import { CreateUserDto } from './dto/create-user.dto';
+import { CreateUserDTO } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 @Controller('user')
 export class UserController {
   constructor(private userService: UserService) {}
 
   @Post()
-  async create(@Body() user: CreateUserDto): Promise<User> {
+  async create(@Body() user: CreateUserDTO): Promise<User> {
     return this.userService.create(user);
   }
 

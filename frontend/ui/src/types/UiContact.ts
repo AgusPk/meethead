@@ -1,4 +1,4 @@
-export interface UiContact {
+export interface ResponseContactDTO {
   name: string;
   profilePictureS3Id: string;
   companyName: string;

@@ -2,9 +2,11 @@ import React, { FC } from "react";
 import List from "@mui/material/List";
 import { ContactListItem } from "./ContactListItem";
 import Typography from "@mui/material/Typography";
-import { UiContact } from "../types/UiContact";
+import { ResponseContactDTO } from "@meethead/types";
 
-export const ContactList: FC<{ contacts: UiContact[] }> = ({ contacts }) => {
+export const ContactList: FC<{ contacts: ResponseContactDTO[] }> = ({
+  contacts,
+}) => {
   const [checked, setChecked] = React.useState([1]);
 
   const haveAnyContacts = contacts?.length !== 0;

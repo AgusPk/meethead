@@ -1,11 +1,11 @@
-import { LinkedinProfile } from 'types';
+import { CreateContactDTO } from '@meethead/types';
 import './content-scripts.css';
 import { getLinkedinData } from './helpers';
 // Function called when a new message is received
 
 const CONTACTS_ENDPOINT = `${process.env.API_URL}/contacts/63120fd98028831ecf43b444`;
 
-const sendProfileToDb = async (profile: LinkedinProfile) => {
+const sendProfileToDb = async (profile: CreateContactDTO) => {
   try {
     await fetch(CONTACTS_ENDPOINT, {
       method: 'POST',
