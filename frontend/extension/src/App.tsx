@@ -1,10 +1,9 @@
 import React from 'react';
 import './App.css';
 import { CreateContactDTO } from '@meethead/types';
-import { Header } from '@meethead/ui';
 
 function App() {
-  const [profile, setProfile] = React.useState<CreateContactDTO | null>(null);
+  const [profile] = React.useState<CreateContactDTO | null>(null);
   const [responseMessage, setMessage] = React.useState<string | null>(null);
 
   // React.useEffect(() => {
@@ -86,7 +85,6 @@ function App() {
     </div>
   ) : (
     <>
-      <Header />
       <h1>You are not in a linkedin Profile</h1>
     </>
   );

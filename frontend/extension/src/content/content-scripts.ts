@@ -38,9 +38,9 @@ const isInLinkedinProfile = (request: any) =>
   request && request.type === 'inLinkedinProfile' && window.location.href.includes('https://www.linkedin.com/in');
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+  console.log(request.type);
   const poprButton = document.getElementById('poprIdButton');
   if (isInLinkedinProfile(request) && !poprButton) {
-    // call method which gets fired as if new page is opened
     mountButton();
   }
   if (!isInLinkedinProfile(request) && poprButton) {

@@ -181,14 +181,6 @@ const config = {
         },
       ],
     }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: commonPaths.workerWrapper,
-          to: 'worker-wrapper.js',
-        },
-      ],
-    }),
   ],
 };
 
