@@ -1,8 +1,8 @@
 import React, { FC } from "react";
-import { StepContent, StepLabel, Typography } from "@mui/material";
+import { Step, StepContent, StepLabel, Typography } from "@mui/material";
 import { StepperButtons } from "./StepperButtons";
 
-export const StepChildren: FC<{
+export const StepChild: FC<{
   step: {
     label: string;
     description: string;

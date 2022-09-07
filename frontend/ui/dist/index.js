@@ -201,7 +201,7 @@ var StepperDrawer = function (_a) {
     return isSmallDevice ? (React__default["default"].createElement(SmallDeviceDrawer, null, children)) : (React__default["default"].createElement(LargeDeviceDrawer, { variant: "permanent" }, children));
 };
 
-var StepChildren = function (_a) {
+var StepChild = function (_a) {
     var step = _a.step, handleNext = _a.handleNext, handleBack = _a.handleBack, index = _a.index, stepLength = _a.stepLength;
     return (React__default["default"].createElement(React__default["default"].Fragment, null,
         React__default["default"].createElement(material.StepLabel, { optional: index === 2 ? (React__default["default"].createElement(material.Typography, { variant: "caption" }, "Last step")) : null }, step.label),
@@ -211,29 +211,8 @@ var StepChildren = function (_a) {
             React__default["default"].createElement(StepperButtons, { handleNext: handleNext, handleBack: handleBack, index: index, stepLength: stepLength }))));
 };
 
-var steps = [
-    {
-        label: "Select campaign settings",
-        description: "For each ad campaign that you create, you can control how much\n              you're willing to spend on clicks and conversions, which networks\n              and geographical locations you want your ads to show on, and more.",
-        content: React__default["default"].createElement(Typography__default["default"], { variant: "h4" }, "This is FOURTH test")
-    },
-    {
-        label: "Create an ad group",
-        description: "An ad group contains one or more ads which target a shared set of keywords.",
-        content: React__default["default"].createElement(Typography__default["default"], { variant: "h4" }, "This is a test")
-    },
-    {
-        label: "Create an ad",
-        description: "Try out different ad text to see what brings in the most customers,\n              and learn how to enhance your ads using features like ad extensions.\n              If you run into any problems with your ads, find out how to tell if\n              they're running and how to resolve approval issues.",
-        content: React__default["default"].createElement(Typography__default["default"], { variant: "h4" }, "This is a test")
-    },
-    {
-        label: "Create something",
-        description: "Try out different ad text to see what brings in the most customers,\n              and learn how to enhance your ads using features like ad extensions.\n              If you run into any problems with your ads, find out how to tell if\n              they're running and how to resolve approval issues.",
-        content: React__default["default"].createElement(Typography__default["default"], { variant: "h4" }, "This another test")
-    },
-];
 var GenericStepper = function (_a) {
+    var steps = _a.steps;
     var _b = React__default["default"].useState(0), activeStep = _b[0], setActiveStep = _b[1];
     var handleNext = function () {
         setActiveStep(function (prevActiveStep) { return prevActiveStep + 1; });
@@ -246,7 +225,7 @@ var GenericStepper = function (_a) {
     };
     return (React__default["default"].createElement(material.Box, { sx: { maxWidth: 400 } },
         React__default["default"].createElement(Stepper__default["default"], { activeStep: activeStep, orientation: "vertical" }, steps.map(function (step, index) { return (React__default["default"].createElement(material.Step, { key: step.label },
-            React__default["default"].createElement(StepChildren, { step: step, handleNext: handleNext, handleBack: handleBack, index: index, stepLength: steps.length }))); })),
+            React__default["default"].createElement(StepChild, { step: step, handleNext: handleNext, handleBack: handleBack, index: index, stepLength: steps.length }))); })),
         activeStep === steps.length && (React__default["default"].createElement(Paper__default["default"], { square: true, elevation: 0, sx: { p: 3 } },
             React__default["default"].createElement(Typography__default["default"], null, "All steps completed - you're finished"),
             React__default["default"].createElement(Button__default["default"], { onClick: handleReset, sx: { mt: 1, mr: 1 } }, "Reset")))));
