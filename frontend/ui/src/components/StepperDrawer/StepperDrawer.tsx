@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { StyledDrawer } from "./styles";
+import { LargeDeviceDrawer } from "./styles";
 import { SmallDeviceDrawer } from "./SmallDeviceDrawer";
 
 export const StepperDrawer: FC<{
@@ -9,8 +9,8 @@ export const StepperDrawer: FC<{
   return isSmallDevice ? (
     <SmallDeviceDrawer>{children}</SmallDeviceDrawer>
   ) : (
-    <StyledDrawer variant="persistent" open>
+    <LargeDeviceDrawer variant="persistent" open>
       {children}
-    </StyledDrawer>
+    </LargeDeviceDrawer>
   );
 };

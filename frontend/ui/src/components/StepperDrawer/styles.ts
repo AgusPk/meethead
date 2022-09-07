@@ -3,7 +3,7 @@ import Drawer from "@mui/material/Drawer";
 import { Box } from "@mui/material";
 import { Button } from "@mui/material";
 
-export const StyledDrawer = styled(Drawer)`
+export const LargeDeviceDrawer = styled(Drawer)`
   flexshrink: 0;
   & .MuiDrawer-paper {
     width: 33.6rem;
