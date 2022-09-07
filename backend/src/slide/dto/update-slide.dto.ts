@@ -1,4 +1,4 @@
 import { PartialType } from '@nestjs/mapped-types';
-import { CreateSlideDto } from './create-slide.dto';
+import { CreateSlideDTO } from '@meethead/types';
 
-export class UpdateSlideDto extends PartialType(CreateSlideDto) {}
+export class UpdateSlideDTO extends PartialType(CreateSlideDTO) {}
