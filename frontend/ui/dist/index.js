@@ -49,13 +49,8 @@ var ListItemText = require('@mui/material/ListItemText');
 var ListItemAvatar = require('@mui/material/ListItemAvatar');
 var Avatar = require('@mui/material/Avatar');
 var Checkbox = require('@mui/material/Checkbox');
-var styles = require('@mui/material/styles');
-var Drawer = require('@mui/material/Drawer');
-var material = require('@mui/material');
-var SwipeableDrawer = require('@mui/material/SwipeableDrawer');
 var Stepper = require('@mui/material/Stepper');
 var material = require('@mui/material');
-var StepContent = require('@mui/material/StepContent');
 var Button = require('@mui/material/Button');
 var Paper = require('@mui/material/Paper');
 
@@ -70,10 +65,7 @@ var ListItemText__default = /*#__PURE__*/_interopDefaultLegacy(ListItemText);
 var ListItemAvatar__default = /*#__PURE__*/_interopDefaultLegacy(ListItemAvatar);
 var Avatar__default = /*#__PURE__*/_interopDefaultLegacy(Avatar);
 var Checkbox__default = /*#__PURE__*/_interopDefaultLegacy(Checkbox);
-var Drawer__default = /*#__PURE__*/_interopDefaultLegacy(Drawer);
-var SwipeableDrawer__default = /*#__PURE__*/_interopDefaultLegacy(SwipeableDrawer);
 var Stepper__default = /*#__PURE__*/_interopDefaultLegacy(Stepper);
-var StepContent__default = /*#__PURE__*/_interopDefaultLegacy(StepContent);
 var Button__default = /*#__PURE__*/_interopDefaultLegacy(Button);
 var Paper__default = /*#__PURE__*/_interopDefaultLegacy(Paper);
 
@@ -209,26 +201,55 @@ var StepperDrawer = function (_a) {
     return isSmallDevice ? (React__default["default"].createElement(SmallDeviceDrawer, null, children)) : (React__default["default"].createElement(LargeDeviceDrawer, { variant: "permanent" }, children));
 };
 
-var CardContainer = styles.styled(Card__default["default"])(templateObject_1$1 || (templateObject_1$1 = __makeTemplateObject(["\n  width: 25rem;\n  height: 25rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  box-shadow: none;\n"], ["\n  width: 25rem;\n  height: 25rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  box-shadow: none;\n"])));
-var templateObject_1$1;
-
-var Slide = function (_a) {
-    var header = _a.header, main = _a.main, footer = _a.footer;
-    return (React__default["default"].createElement(CardContainer, null,
-        React__default["default"].createElement(CardContent__default["default"], null,
-            React__default["default"].createElement(Typography__default["default"], { variant: "body2", color: "text.secondary" }, header)),
-        React__default["default"].createElement(CardContent__default["default"], null,
-            React__default["default"].createElement(Typography__default["default"], { variant: "body2", color: "text.secondary" }, main)),
-        React__default["default"].createElement(CardContent__default["default"], null,
-            React__default["default"].createElement(Typography__default["default"], { variant: "body2", color: "text.secondary" }, footer))));
+var StepChildren = function (_a) {
+    var step = _a.step, handleNext = _a.handleNext, handleBack = _a.handleBack, index = _a.index, stepLength = _a.stepLength;
+    return (React__default["default"].createElement(React__default["default"].Fragment, null,
+        React__default["default"].createElement(material.StepLabel, { optional: index === 2 ? (React__default["default"].createElement(material.Typography, { variant: "caption" }, "Last step")) : null }, step.label),
+        React__default["default"].createElement(material.StepContent, null,
+            React__default["default"].createElement(material.Typography, null, step.description),
+            step.content,
+            React__default["default"].createElement(StepperButtons, { handleNext: handleNext, handleBack: handleBack, index: index, stepLength: stepLength }))));
 };
 
-var PreviewLayoutBox = styles.styled(material.Box)(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  background: #e6e6e6;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-self: end;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  overflow-y: scroll;\n"], ["\n  background: #e6e6e6;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-self: end;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  overflow-y: scroll;\n"])));
-var templateObject_1;
-
-var PreviewLayoutContainer = function (_a) {
-    var children = _a.children;
-    return React__default["default"].createElement(PreviewLayoutBox, null, children);
+var steps = [
+    {
+        label: "Select campaign settings",
+        description: "For each ad campaign that you create, you can control how much\n              you're willing to spend on clicks and conversions, which networks\n              and geographical locations you want your ads to show on, and more.",
+        content: React__default["default"].createElement(Typography__default["default"], { variant: "h4" }, "This is FOURTH test")
+    },
+    {
+        label: "Create an ad group",
+        description: "An ad group contains one or more ads which target a shared set of keywords.",
+        content: React__default["default"].createElement(Typography__default["default"], { variant: "h4" }, "This is a test")
+    },
+    {
+        label: "Create an ad",
+        description: "Try out different ad text to see what brings in the most customers,\n              and learn how to enhance your ads using features like ad extensions.\n              If you run into any problems with your ads, find out how to tell if\n              they're running and how to resolve approval issues.",
+        content: React__default["default"].createElement(Typography__default["default"], { variant: "h4" }, "This is a test")
+    },
+    {
+        label: "Create something",
+        description: "Try out different ad text to see what brings in the most customers,\n              and learn how to enhance your ads using features like ad extensions.\n              If you run into any problems with your ads, find out how to tell if\n              they're running and how to resolve approval issues.",
+        content: React__default["default"].createElement(Typography__default["default"], { variant: "h4" }, "This another test")
+    },
+];
+var GenericStepper = function (_a) {
+    var _b = React__default["default"].useState(0), activeStep = _b[0], setActiveStep = _b[1];
+    var handleNext = function () {
+        setActiveStep(function (prevActiveStep) { return prevActiveStep + 1; });
+    };
+    var handleBack = function () {
+        setActiveStep(function (prevActiveStep) { return prevActiveStep - 1; });
+    };
+    var handleReset = function () {
+        setActiveStep(0);
+    };
+    return (React__default["default"].createElement(material.Box, { sx: { maxWidth: 400 } },
+        React__default["default"].createElement(Stepper__default["default"], { activeStep: activeStep, orientation: "vertical" }, steps.map(function (step, index) { return (React__default["default"].createElement(material.Step, { key: step.label },
+            React__default["default"].createElement(StepChildren, { step: step, handleNext: handleNext, handleBack: handleBack, index: index, stepLength: steps.length }))); })),
+        activeStep === steps.length && (React__default["default"].createElement(Paper__default["default"], { square: true, elevation: 0, sx: { p: 3 } },
+            React__default["default"].createElement(Typography__default["default"], null, "All steps completed - you're finished"),
+            React__default["default"].createElement(Button__default["default"], { onClick: handleReset, sx: { mt: 1, mr: 1 } }, "Reset")))));
 };
 
 exports.ContactList = ContactList;

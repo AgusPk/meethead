@@ -1,29 +1,20 @@
 import React, { FC } from "react";
-import Step from "@mui/material/Step";
-import StepLabel from "@mui/material/StepLabel";
-import StepContent from "@mui/material/StepContent";
+import { StepContent, StepLabel, Typography } from "@mui/material";
 import { StepperButtons } from "./StepperButtons";
-import Typography from "@mui/material/Typography";
 
-export const IndividualStep: FC<{
-  children: React.ReactNode;
-  label: string;
-  description: string;
+export const StepChildren: FC<{
+  step: {
+    label: string;
+    description: string;
+    content: JSX.Element;
+  };
   handleNext: () => void;
   handleBack: () => void;
   index: number;
   stepLength: number;
-}> = ({
-  children,
-  label,
-  description,
-  handleNext,
-  handleBack,
-  index,
-  stepLength,
-}) => {
+}> = ({ step, handleNext, handleBack, index, stepLength }) => {
   return (
-    <Step key={label}>
+    <>
       <StepLabel
         optional={
           index === 2 ? (
@@ -31,11 +22,11 @@ export const IndividualStep: FC<{
           ) : null
         }
       >
-        {label}
+        {step.label}
       </StepLabel>
       <StepContent>
-        <Typography>{description}</Typography>
-        {children}
+        <Typography>{step.description}</Typography>
+        {step.content}
         <StepperButtons
           handleNext={handleNext}
           handleBack={handleBack}
@@ -43,6 +34,6 @@ export const IndividualStep: FC<{
           stepLength={stepLength}
         ></StepperButtons>
       </StepContent>
-    </Step>
+    </>
   );
 };

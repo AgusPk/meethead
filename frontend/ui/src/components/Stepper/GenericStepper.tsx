@@ -1,12 +1,10 @@
 import React, { FC } from "react";
 import Stepper from "@mui/material/Stepper";
-import { IndividualStep } from "./IndividualStep";
-import { Box, Step, StepLabel } from "@mui/material";
-import StepContent from "@mui/material/StepContent";
+import { Box, Step } from "@mui/material";
 import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
-import { StepperButtons } from "./StepperButtons";
+import { StepChildren } from "./StepChildren";
 
 const steps = [
   {
@@ -14,7 +12,7 @@ const steps = [
     description: `For each ad campaign that you create, you can control how much
               you're willing to spend on clicks and conversions, which networks
               and geographical locations you want your ads to show on, and more.`,
-    content: <Typography variant="h4">This is a test</Typography>,
+    content: <Typography variant="h4">This is FOURTH test</Typography>,
   },
   {
     label: "Create an ad group",
@@ -29,6 +27,14 @@ const steps = [
               If you run into any problems with your ads, find out how to tell if
               they're running and how to resolve approval issues.`,
     content: <Typography variant="h4">This is a test</Typography>,
+  },
+  {
+    label: "Create something",
+    description: `Try out different ad text to see what brings in the most customers,
+              and learn how to enhance your ads using features like ad extensions.
+              If you run into any problems with your ads, find out how to tell if
+              they're running and how to resolve approval issues.`,
+    content: <Typography variant="h4">This another test</Typography>,
   },
 ];
 
@@ -52,25 +58,13 @@ export const GenericStepper: FC<{}> = ({}) => {
       <Stepper activeStep={activeStep} orientation="vertical">
         {steps.map((step, index) => (
           <Step key={step.label}>
-            <StepLabel
-              optional={
-                index === 2 ? (
-                  <Typography variant="caption">Last step</Typography>
-                ) : null
-              }
-            >
-              {step.label}
-            </StepLabel>
-            <StepContent>
-              <Typography>{step.description}</Typography>
-              {step.content}
-              <StepperButtons
-                handleNext={handleNext}
-                handleBack={handleBack}
-                index={index}
-                stepLength={steps.length}
-              ></StepperButtons>
-            </StepContent>
+            <StepChildren
+              step={step}
+              handleNext={handleNext}
+              handleBack={handleBack}
+              index={index}
+              stepLength={steps.length}
+            />
           </Step>
         ))}
       </Stepper>
