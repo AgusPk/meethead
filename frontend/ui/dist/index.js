@@ -122,7 +122,7 @@ var ContactList = function (_a) {
     })) : (React__default["default"].createElement(Typography__default["default"], { variant: "h6" }, "No contacts yet..."))));
 };
 
-var StyledDrawer = styles.styled(Drawer__default["default"])(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  flexshrink: 0;\n  & .MuiDrawer-paper {\n    width: 33.6rem;\n    border-right: none;\n    background: white;\n  }\n"], ["\n  flexshrink: 0;\n  & .MuiDrawer-paper {\n    width: 33.6rem;\n    border-right: none;\n    background: white;\n  }\n"])));
+var LargeDeviceDrawer = styles.styled(Drawer__default["default"])(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  flexshrink: 0;\n  & .MuiDrawer-paper {\n    width: 33.6rem;\n    border-right: none;\n    background: white;\n  }\n"], ["\n  flexshrink: 0;\n  & .MuiDrawer-paper {\n    width: 33.6rem;\n    border-right: none;\n    background: white;\n  }\n"])));
 var Puller = styles.styled(material.Button)(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  width: 1.875rem;\n  height: 0.375rem;\n  background-color: #451d53;\n  border-radius: 3rem;\n  left: calc(50% - 30px);\n  &:hover {\n    background-color: #8c29af;\n  }\n"], ["\n  width: 1.875rem;\n  height: 0.375rem;\n  background-color: #451d53;\n  border-radius: 3rem;\n  left: calc(50% - 30px);\n  &:hover {\n    background-color: #8c29af;\n  }\n"])));
 var DrawerOpenBox = styles.styled(material.Box)(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  height: 3rem;\n  top: -100px;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n"], ["\n  height: 3rem;\n  top: -100px;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n"])));
 var DrawerClosedBox = styles.styled(material.Box)(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  height: 3rem;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n  position: absolute;\n  bottom: 0;\n"], ["\n  height: 3rem;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n  position: absolute;\n  bottom: 0;\n"])));
@@ -147,7 +147,7 @@ var SmallDeviceDrawer = function (_a) {
 
 var StepperDrawer = function (_a) {
     var children = _a.children, isSmallDevice = _a.isSmallDevice;
-    return isSmallDevice ? (React__default["default"].createElement(SmallDeviceDrawer, null, children)) : (React__default["default"].createElement(StyledDrawer, { variant: "persistent", open: true }, children));
+    return isSmallDevice ? (React__default["default"].createElement(SmallDeviceDrawer, null, children)) : (React__default["default"].createElement(LargeDeviceDrawer, { variant: "persistent", open: true }, children));
 };
 
 exports.ContactList = ContactList;

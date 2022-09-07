@@ -1,5 +1,5 @@
 /// <reference types="react" />
-export declare const StyledDrawer: import("@emotion/styled").StyledComponent<import("@mui/material").DrawerProps & import("@mui/system").MUIStyledCommonProps<import("@mui/material").Theme>, {}, {}>;
+export declare const LargeDeviceDrawer: import("@emotion/styled").StyledComponent<import("@mui/material").DrawerProps & import("@mui/system").MUIStyledCommonProps<import("@mui/material").Theme>, {}, {}>;
 export declare const Puller: import("@emotion/styled").StyledComponent<{
     children?: import("react").ReactNode;
     classes?: Partial<import("@mui/material").ButtonClasses>;
