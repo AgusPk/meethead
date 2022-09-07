@@ -1,6 +1,6 @@
 import typescript from "rollup-plugin-typescript2";
 import alias from "@rollup/plugin-alias";
-import externals from 'rollup-plugin-node-externals'
+import externals from "rollup-plugin-node-externals";
 
 export default {
   input: ["src/index.tsx"],
@@ -15,9 +15,7 @@ export default {
   plugins: [
     typescript(),
     alias({ "@mui/styled-engine": "@mui/styled-engine-sc" }),
-    externals()
+    externals(),
   ],
-  external: [
-    "react",
-  ],
+  external: ["react"],
 };
