@@ -12,11 +12,10 @@ const Landing: FC = () => {
   const { data: contacts } = useQuery(['getContacts'], async () => await getContacts('63120fd98028831ecf43b444'));
   const isSmallDevice = useIsSmallDevice();
 
-  console.log(isSmallDevice);
   return (
     <FullWidthLayout>
-      <StepperDrawer>
-        <h2>omg drawer hi</h2>
+      <StepperDrawer isSmallDevice={isSmallDevice}>
+        <h2>drawer</h2>
       </StepperDrawer>
       <h1>{t('app.title')}</h1>
       <ContactList contacts={contacts} />
