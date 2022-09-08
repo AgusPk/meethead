@@ -6,7 +6,7 @@ import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import { ContactCompanyList } from "./ContactCompanyList";
 import { ContactCheckbox } from "./ContactCheckbox";
-import { ResponseContactDTO } from "@meethead/types";
+import { ResponseContactDTO } from "@popr/types";
 
 export const ContactListItem: FC<{
   contact: ResponseContactDTO;

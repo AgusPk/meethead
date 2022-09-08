@@ -14,17 +14,15 @@ Start development environment of a workspace
 ```sh
 $ npm run start -w=<name-of-workspace>
 ```
+
 Current workspaces:
 
 backend
-@meethead/ui
-@meethead/app
-@meethead/extension
-
+@popr/ui
+@popr/app
+@popr/extension
 
 Note: to start the extension workspace or the app, it is recommended to have the ui project running so you can see the changes you make in ui with hot reload.
-
-
 
 ## Production
 
@@ -34,10 +32,9 @@ Generate production files running
 $ npm run build --workspaces
 ```
 
-
 ## Testing the extension
 
-Go to chrome://extensions/ in you browser 
+Go to chrome://extensions/ in you browser
 
 Turn on developer mode and select Load unpacked
 

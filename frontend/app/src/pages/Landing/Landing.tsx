@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import FullWidthLayout from 'layouts/FullWidth';
 import { useTranslation } from 'react-i18next';
-import { ContactList } from '@meethead/ui';
-import { StepperDrawer } from '@meethead/ui';
+import { ContactList } from '@popr/ui';
+import { StepperDrawer } from '@popr/ui';
 import { getContacts } from 'services/contacts';
 import { useQuery } from 'react-query';
 import { useIsSmallDevice } from 'hooks/useWindowSize/index';

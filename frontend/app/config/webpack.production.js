@@ -46,7 +46,7 @@ const config = {
       PUBLIC_URL,
     }),
     new Dotenv({
-      path: commonPaths.prodEnv,
+      systemvars: true,
     }),
     new MiniCssWebpackPlugin({
       filename: 'assets/css/[name].[chunkhash].css',

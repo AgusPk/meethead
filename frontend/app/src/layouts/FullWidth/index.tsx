@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import { Header } from '@meethead/ui';
+import { Header } from '@popr/ui';
 import { Root, Main } from './styles';
 
 type FullWidthLayoutProps = {
