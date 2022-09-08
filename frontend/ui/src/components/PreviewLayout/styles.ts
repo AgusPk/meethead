@@ -10,4 +10,5 @@ export const PreviewLayoutBox = styled(Box)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow-y: scroll;
 `;
