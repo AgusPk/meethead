@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from 'react';
-import { PreviewLayoutContainer } from '@meethead/ui';
-import { ContactList } from '@meethead/ui';
+import { PreviewLayoutContainer } from '@popr/ui';
+import { ContactList } from '@popr/ui';
 import { getContacts } from 'services/contacts';
 import { useQuery } from 'react-query';
 import { useTranslation } from 'react-i18next';

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { StepperDrawer } from '@meethead/ui';
+import { StepperDrawer } from '@popr/ui';
 import { useIsSmallDevice } from 'hooks/useWindowSize/index';
 import PreviewLayout from 'layouts/PreviewLayout';
 
