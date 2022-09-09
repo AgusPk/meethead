@@ -1,19 +1,8 @@
-let currentUrl = '';
-let tabId: number;
+chrome.runtime.onConnect.addListener((port) => {
+  console.log(port);
 
-chrome.webNavigation.onHistoryStateUpdated.addListener(
-  (details) => {
-    tabId = details.tabId;
-    currentUrl = details.url;
-  },
-  {
-    url: [
-      {
-        hostContains: '.linkedin',
-      },
-    ],
-  },
-);
+  port.disconnect();
+});
 
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
   if (changeInfo.status == 'complete' && tab.active) {
