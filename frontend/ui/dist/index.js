@@ -346,6 +346,13 @@ var PreviewLayoutBox = styles.styled(material.Box)(
 );
 var templateObject_1;
 
+    var children = _a.children, isSmallDevice = _a.isSmallDevice;
+    return isSmallDevice ? (React__default["default"].createElement(SmallDeviceDrawer, null, children)) : (React__default["default"].createElement(LargeDeviceDrawer, { variant: "permanent" }, children));
+};
+
+var PreviewLayoutBox = styles.styled(material.Box)(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  background: #e6e6e6;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-self: end;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  overflow-y: scroll;\n"], ["\n  background: #e6e6e6;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-self: end;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  overflow-y: scroll;\n"])));
+var templateObject_1;
+
 var PreviewLayoutContainer = function (_a) {
   var children = _a.children;
   return React__default["default"].createElement(

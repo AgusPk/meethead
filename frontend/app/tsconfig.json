@@ -20,6 +20,6 @@
     "jsx": "react",
     "resolveJsonModule": true
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "src/layouts/PreviewLayout"],
+  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
   "exclude": ["node_modules"]
 }
