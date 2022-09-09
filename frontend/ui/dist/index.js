@@ -15,6 +15,8 @@ var styles = require('@mui/material/styles');
 var Drawer = require('@mui/material/Drawer');
 var material = require('@mui/material');
 var SwipeableDrawer = require('@mui/material/SwipeableDrawer');
+var CardContent = require('@mui/material/CardContent');
+var Card = require('@mui/material/Card');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -29,6 +31,8 @@ var Avatar__default = /*#__PURE__*/_interopDefaultLegacy(Avatar);
 var Checkbox__default = /*#__PURE__*/_interopDefaultLegacy(Checkbox);
 var Drawer__default = /*#__PURE__*/_interopDefaultLegacy(Drawer);
 var SwipeableDrawer__default = /*#__PURE__*/_interopDefaultLegacy(SwipeableDrawer);
+var CardContent__default = /*#__PURE__*/_interopDefaultLegacy(CardContent);
+var Card__default = /*#__PURE__*/_interopDefaultLegacy(Card);
 
 function Header() {
     return React__default["default"].createElement(Typography__default["default"], { variant: "h3" }, "Popr.ai");
@@ -122,11 +126,11 @@ var ContactList = function (_a) {
     })) : (React__default["default"].createElement(Typography__default["default"], { variant: "h6" }, "No contacts yet..."))));
 };
 
-var LargeDeviceDrawer = styles.styled(Drawer__default["default"])(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  flexshrink: 0;\n  & .MuiDrawer-paper {\n    width: 33.6rem;\n    border-right: none;\n    background: white;\n  }\n"], ["\n  flexshrink: 0;\n  & .MuiDrawer-paper {\n    width: 33.6rem;\n    border-right: none;\n    background: white;\n  }\n"])));
+var LargeDeviceDrawer = styles.styled(Drawer__default["default"])(templateObject_1$1 || (templateObject_1$1 = __makeTemplateObject(["\n  flexshrink: 0;\n  & .MuiDrawer-paper {\n    width: 33.6rem;\n    border-right: none;\n    background: white;\n  }\n"], ["\n  flexshrink: 0;\n  & .MuiDrawer-paper {\n    width: 33.6rem;\n    border-right: none;\n    background: white;\n  }\n"])));
 var Puller = styles.styled(material.Button)(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  width: 1.875rem;\n  height: 0.375rem;\n  background-color: #451d53;\n  border-radius: 3rem;\n  left: calc(50% - 30px);\n  &:hover {\n    background-color: #8c29af;\n  }\n"], ["\n  width: 1.875rem;\n  height: 0.375rem;\n  background-color: #451d53;\n  border-radius: 3rem;\n  left: calc(50% - 30px);\n  &:hover {\n    background-color: #8c29af;\n  }\n"])));
 var DrawerOpenBox = styles.styled(material.Box)(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  height: 3rem;\n  top: -100px;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n"], ["\n  height: 3rem;\n  top: -100px;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n"])));
 var DrawerClosedBox = styles.styled(material.Box)(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  height: 3rem;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n  position: absolute;\n  bottom: 0;\n"], ["\n  height: 3rem;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n  position: absolute;\n  bottom: 0;\n"])));
-var templateObject_1, templateObject_2, templateObject_3, templateObject_4;
+var templateObject_1$1, templateObject_2, templateObject_3, templateObject_4;
 
 var SmallDeviceDrawer = function (_a) {
     var children = _a.children;
@@ -150,6 +154,21 @@ var StepperDrawer = function (_a) {
     return isSmallDevice ? (React__default["default"].createElement(SmallDeviceDrawer, null, children)) : (React__default["default"].createElement(LargeDeviceDrawer, { variant: "persistent", open: true }, children));
 };
 
+var CardContainer = styles.styled(Card__default["default"])(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  width: 25rem;\n  height: 25rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  box-shadow: none;\n"], ["\n  width: 25rem;\n  height: 25rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  box-shadow: none;\n"])));
+var templateObject_1;
+
+var Slide = function (_a) {
+    var header = _a.header, main = _a.main, footer = _a.footer;
+    return (React__default["default"].createElement(CardContainer, null,
+        React__default["default"].createElement(CardContent__default["default"], null,
+            React__default["default"].createElement(Typography__default["default"], { variant: "body2", color: "text.secondary" }, header)),
+        React__default["default"].createElement(CardContent__default["default"], null,
+            React__default["default"].createElement(Typography__default["default"], { variant: "body2", color: "text.secondary" }, main)),
+        React__default["default"].createElement(CardContent__default["default"], null,
+            React__default["default"].createElement(Typography__default["default"], { variant: "body2", color: "text.secondary" }, footer))));
+};
+
 exports.ContactList = ContactList;
 exports.Header = Header;
+exports.Slide = Slide;
 exports.StepperDrawer = StepperDrawer;
