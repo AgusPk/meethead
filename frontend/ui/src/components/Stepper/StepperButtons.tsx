@@ -7,6 +7,8 @@ export const StepperButtons: FC<{
   index: number;
   stepLength: number;
 }> = ({ handleNext, handleBack, index, stepLength }) => {
+  const showContinueOrSave = index === stepLength - 1 ? "Save" : "Continue";
+
   return (
     <Box sx={{ mb: 2 }}>
       <div>
@@ -18,7 +20,7 @@ export const StepperButtons: FC<{
           Back
         </Button>
         <Button variant="contained" onClick={handleNext} sx={{ mt: 1, mr: 1 }}>
-          {index === stepLength - 1 ? "Save" : "Continue"}
+          {showContinueOrSave}
         </Button>
       </div>
     </Box>

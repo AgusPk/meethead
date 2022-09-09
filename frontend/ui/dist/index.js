@@ -276,17 +276,24 @@ var StepperDrawer = function (_a) {
 
 var StepperButtons = function (_a) {
     var handleNext = _a.handleNext, handleBack = _a.handleBack, index = _a.index, stepLength = _a.stepLength;
+    var showContinueOrSave = index === stepLength - 1 ? "Save" : "Continue";
     return (React__default["default"].createElement(material.Box, { sx: { mb: 2 } },
         React__default["default"].createElement("div", null,
             React__default["default"].createElement(material.Button, { disabled: index === 0, onClick: handleBack, sx: { mt: 1, mr: 1 } }, "Back"),
+<<<<<<< HEAD
             React__default["default"].createElement(material.Button, { variant: "contained", onClick: handleNext, sx: { mt: 1, mr: 1 } }, index === stepLength - 1 ? "Save" : "Continue"))));
 };
 
 >>>>>>> POPR-155 Eliminate generic stepper from app
+=======
+            React__default["default"].createElement(material.Button, { variant: "contained", onClick: handleNext, sx: { mt: 1, mr: 1 } }, showContinueOrSave))));
+};
+
+>>>>>>> POPR-155 move condition to const
 var StepChild = function (_a) {
     var step = _a.step, handleNext = _a.handleNext, handleBack = _a.handleBack, index = _a.index, stepLength = _a.stepLength;
     return (React__default["default"].createElement(React__default["default"].Fragment, null,
-        React__default["default"].createElement(material.StepLabel, { optional: index === 2 ? (React__default["default"].createElement(material.Typography, { variant: "caption" }, "Last step")) : null }, step.label),
+        React__default["default"].createElement(material.StepLabel, null, step.label),
         React__default["default"].createElement(material.StepContent, null,
             React__default["default"].createElement(material.Typography, null, step.description),
             step.content,
