@@ -9,8 +9,6 @@ export const StepperDrawer: FC<{
   return isSmallDevice ? (
     <SmallDeviceDrawer>{children}</SmallDeviceDrawer>
   ) : (
-    <LargeDeviceDrawer variant="persistent" open>
-      {children}
-    </LargeDeviceDrawer>
+    <LargeDeviceDrawer variant="permanent">{children}</LargeDeviceDrawer>
   );
 };

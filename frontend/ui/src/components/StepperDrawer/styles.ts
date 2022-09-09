@@ -4,7 +4,8 @@ import { Box } from "@mui/material";
 import { Button } from "@mui/material";
 
 export const LargeDeviceDrawer = styled(Drawer)`
-  flexshrink: 0;
+  flex-shrink: 0;
+  width: 33.6rem;
   & .MuiDrawer-paper {
     width: 33.6rem;
     border-right: none;
@@ -42,4 +43,5 @@ export const DrawerClosedBox = styled(Box)`
   left: 0;
   position: absolute;
   bottom: 0;
+  z-index: 1;
 `;
