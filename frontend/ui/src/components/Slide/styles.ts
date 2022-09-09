@@ -1,7 +1,7 @@
 import { styled } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 
-export const ContainerCard = styled(Card)`
+export const CardContainer = styled(Card)`
   width: 25rem;
   height: 25rem;
   display: flex;

@@ -154,12 +154,12 @@ var StepperDrawer = function (_a) {
     return isSmallDevice ? (React__default["default"].createElement(SmallDeviceDrawer, null, children)) : (React__default["default"].createElement(LargeDeviceDrawer, { variant: "persistent", open: true }, children));
 };
 
-var ContainerCard = styles.styled(Card__default["default"])(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  width: 25rem;\n  height: 25rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  box-shadow: none;\n"], ["\n  width: 25rem;\n  height: 25rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  box-shadow: none;\n"])));
+var CardContainer = styles.styled(Card__default["default"])(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  width: 25rem;\n  height: 25rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  box-shadow: none;\n"], ["\n  width: 25rem;\n  height: 25rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  box-shadow: none;\n"])));
 var templateObject_1;
 
 var Slide = function (_a) {
     var header = _a.header, main = _a.main, footer = _a.footer;
-    return (React__default["default"].createElement(ContainerCard, null,
+    return (React__default["default"].createElement(CardContainer, null,
         React__default["default"].createElement(CardContent__default["default"], null,
             React__default["default"].createElement(Typography__default["default"], { variant: "body2", color: "text.secondary" }, header)),
         React__default["default"].createElement(CardContent__default["default"], null,

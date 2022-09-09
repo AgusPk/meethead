@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import { ContainerCard } from "./styles";
+import { CardContainer } from "./styles";
 
 export const Slide: FC<{
   header: string;
@@ -9,7 +9,7 @@ export const Slide: FC<{
   footer: string;
 }> = ({ header, main, footer }) => {
   return (
-    <ContainerCard>
+    <CardContainer>
       <CardContent>
         <Typography variant="body2" color="text.secondary">
           {header}
@@ -25,6 +25,6 @@ export const Slide: FC<{
           {footer}
         </Typography>
       </CardContent>
-    </ContainerCard>
+    </CardContainer>
   );
 };

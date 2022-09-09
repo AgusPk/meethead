@@ -1,5 +1,5 @@
 /// <reference types="react" />
-export declare const ContainerCard: import("@emotion/styled").StyledComponent<Omit<import("@mui/material").PaperProps<"div", {}>, "classes"> & {
+export declare const CardContainer: import("@emotion/styled").StyledComponent<Omit<import("@mui/material").PaperProps<"div", {}>, "classes"> & {
     classes?: Partial<import("@mui/material/Card").CardClasses>;
     raised?: boolean;
     sx?: import("@mui/material/styles").SxProps<import("@mui/material/styles").Theme>;
