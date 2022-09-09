@@ -1,12 +1,13 @@
 import React, { FC } from "react";
 import { Button, Box } from "@mui/material";
+import { StepButtonProps } from "./interfaces";
 
-export const StepperButtons: FC<{
-  handleNext: () => void;
-  handleBack: () => void;
-  index: number;
-  stepLength: number;
-}> = ({ handleNext, handleBack, index, stepLength }) => {
+export const StepperButtons: FC<StepButtonProps> = ({
+  handleNext,
+  handleBack,
+  index,
+  stepLength,
+}) => {
   const showContinueOrSave = index === stepLength - 1 ? "Save" : "Continue";
 
   return (

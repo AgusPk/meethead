@@ -1,18 +1,15 @@
 import React, { FC } from "react";
 import { Step, StepContent, StepLabel, Typography } from "@mui/material";
 import { StepperButtons } from "./StepperButtons";
+import { StepChildProps } from "./interfaces";
 
-export const StepChild: FC<{
-  step: {
-    label: string;
-    description: string;
-    content: JSX.Element;
-  };
-  handleNext: () => void;
-  handleBack: () => void;
-  index: number;
-  stepLength: number;
-}> = ({ step, handleNext, handleBack, index, stepLength }) => {
+export const StepChild: FC<StepChildProps> = ({
+  step,
+  handleNext,
+  handleBack,
+  index,
+  stepLength,
+}) => {
   return (
     <>
       <StepLabel>{step.label}</StepLabel>

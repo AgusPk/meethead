@@ -1,8 +1,5 @@
 import { FC } from "react";
+import { StepProps } from "./interfaces";
 export declare const GenericStepper: FC<{
-    steps: {
-        label: string;
-        description: string;
-        content: JSX.Element;
-    }[];
+    steps: StepProps[];
 }>;

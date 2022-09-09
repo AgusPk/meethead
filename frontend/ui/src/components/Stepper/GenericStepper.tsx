@@ -5,14 +5,9 @@ import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import { StepChild } from "./StepChild";
+import { StepProps } from "./interfaces";
 
-export const GenericStepper: FC<{
-  steps: {
-    label: string;
-    description: string;
-    content: JSX.Element;
-  }[];
-}> = ({ steps }) => {
+export const GenericStepper: FC<{ steps: StepProps[] }> = ({ steps }) => {
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {
