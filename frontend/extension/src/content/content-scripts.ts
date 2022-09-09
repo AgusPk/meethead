@@ -1,4 +1,4 @@
-import { CreateContactDTO } from '@meethead/types';
+import { CreateContactDTO } from '@popr/types';
 import './content-scripts.css';
 import { getLinkedinData } from './helpers';
 // Function called when a new message is received

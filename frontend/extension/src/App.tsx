@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import { CreateContactDTO } from '@meethead/types';
-import { Header } from '@meethead/ui';
+import { CreateContactDTO } from '@popr/types';
+import { Header } from '@popr/ui';
 
 function App() {
   const [profile, setProfile] = React.useState<CreateContactDTO | null>(null);

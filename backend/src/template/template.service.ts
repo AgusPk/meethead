@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { CreateTemplateDTO } from '@meethead/types';
+import { CreateTemplateDTO } from '@popr/types';
 import { UpdateTemplateDTO } from './dto/update-template.dto';
 import { Template, TemplateDocument } from './schemas/template.schema';
 
