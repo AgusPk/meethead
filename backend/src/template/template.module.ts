@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
-import { TemplateService } from './template.service';
+import { MongooseModule } from '@nestjs/mongoose';
+import { Template, TemplateSchema } from './schemas/template.schema';
 import { TemplateController } from './template.controller';
 import { SlideController } from 'src/slide/slide.controller';
+import { TemplateService } from './template.service';
 import { SlideService } from 'src/slide/slide.service';
-import { Template, TemplateSchema } from './schemas/template.schema';
-import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
   imports: [

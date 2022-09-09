@@ -1,15 +1,27 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+} from '@nestjs/common';
 import { SlideService } from './slide.service';
-import { CreateSlideDto } from './dto/create-slide.dto';
-import { UpdateSlideDto } from './dto/update-slide.dto';
+import { CreateSlideDTO } from '@meethead/types';
+import { UpdateSlideDTO } from './dto/update-slide.dto';
+import { Template } from 'src/template/schemas/template.schema';
 
 @Controller('slide')
 export class SlideController {
   constructor(private readonly slideService: SlideService) {}
 
-  @Post()
-  create(@Body() createSlideDto: CreateSlideDto) {
-    return this.slideService.create(createSlideDto);
+  @Post('/:id')
+  addSlides(
+    @Param('id') templateId: string,
+    @Body() slides: CreateSlideDTO[],
+  ): Promise<Template> {
+    return this.slideService.addSlides(templateId, slides);
   }
 
   @Get()
@@ -19,16 +31,16 @@ export class SlideController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.slideService.findOne(+id);
+    return this.slideService.findOne(id);
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateSlideDto: UpdateSlideDto) {
-    return this.slideService.update(+id, updateSlideDto);
+  update(@Param('id') id: string, @Body() updateSlideDTO: UpdateSlideDTO) {
+    return this.slideService.update(id, updateSlideDTO);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.slideService.remove(+id);
+    return this.slideService.remove(id);
   }
 }
