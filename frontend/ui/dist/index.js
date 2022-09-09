@@ -1,64 +1,34 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use strict';
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
 var React = require('react');
 var Typography = require('@mui/material/Typography');
-var List = require('@mui/material/List');
-var ListItem = require('@mui/material/ListItem');
-var ListItemButton = require('@mui/material/ListItemButton');
-var ListItemText = require('@mui/material/ListItemText');
-var ListItemAvatar = require('@mui/material/ListItemAvatar');
-var Avatar = require('@mui/material/Avatar');
-var Checkbox = require('@mui/material/Checkbox');
 var styles = require('@mui/material/styles');
 var Drawer = require('@mui/material/Drawer');
 var material = require('@mui/material');
 var SwipeableDrawer = require('@mui/material/SwipeableDrawer');
 var CardContent = require('@mui/material/CardContent');
 var Card = require('@mui/material/Card');
+var List = require('@mui/material/List');
+var ListItem = require('@mui/material/ListItem');
+var ListItemButton = require('@mui/material/ListItemButton');
+var ListItemText = require('@mui/material/ListItemText');
+var ListItemAvatar = require('@mui/material/ListItemAvatar');
+var Avatar = require('@mui/material/Avatar');
+var Checkbox = require('@mui/material/Checkbox');
+var Stepper = require('@mui/material/Stepper');
+var Button = require('@mui/material/Button');
+var Paper = require('@mui/material/Paper');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
 var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
 var Typography__default = /*#__PURE__*/_interopDefaultLegacy(Typography);
-var List__default = /*#__PURE__*/_interopDefaultLegacy(List);
-var ListItem__default = /*#__PURE__*/_interopDefaultLegacy(ListItem);
-var ListItemButton__default = /*#__PURE__*/_interopDefaultLegacy(ListItemButton);
-var ListItemText__default = /*#__PURE__*/_interopDefaultLegacy(ListItemText);
-var ListItemAvatar__default = /*#__PURE__*/_interopDefaultLegacy(ListItemAvatar);
-var Avatar__default = /*#__PURE__*/_interopDefaultLegacy(Avatar);
-var Checkbox__default = /*#__PURE__*/_interopDefaultLegacy(Checkbox);
 var Drawer__default = /*#__PURE__*/_interopDefaultLegacy(Drawer);
 var SwipeableDrawer__default = /*#__PURE__*/_interopDefaultLegacy(SwipeableDrawer);
 var CardContent__default = /*#__PURE__*/_interopDefaultLegacy(CardContent);
 var Card__default = /*#__PURE__*/_interopDefaultLegacy(Card);
-
-=======
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-var React = require('react');
-var Typography = require('@mui/material/Typography');
-var List = require('@mui/material/List');
-var ListItem = require('@mui/material/ListItem');
-var ListItemButton = require('@mui/material/ListItemButton');
-var ListItemText = require('@mui/material/ListItemText');
-var ListItemAvatar = require('@mui/material/ListItemAvatar');
-var Avatar = require('@mui/material/Avatar');
-var Checkbox = require('@mui/material/Checkbox');
-var Stepper = require('@mui/material/Stepper');
-var material = require('@mui/material');
-var Button = require('@mui/material/Button');
-var Paper = require('@mui/material/Paper');
-
-function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
-
-var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
-var Typography__default = /*#__PURE__*/_interopDefaultLegacy(Typography);
 var List__default = /*#__PURE__*/_interopDefaultLegacy(List);
 var ListItem__default = /*#__PURE__*/_interopDefaultLegacy(ListItem);
 var ListItemButton__default = /*#__PURE__*/_interopDefaultLegacy(ListItemButton);
@@ -70,47 +40,6 @@ var Stepper__default = /*#__PURE__*/_interopDefaultLegacy(Stepper);
 var Button__default = /*#__PURE__*/_interopDefaultLegacy(Button);
 var Paper__default = /*#__PURE__*/_interopDefaultLegacy(Paper);
 
->>>>>>> material ui stepper functioning
-=======
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-var React = require('react');
-var Typography = require('@mui/material/Typography');
-var styles = require('@mui/material/styles');
-var Drawer = require('@mui/material/Drawer');
-var material = require('@mui/material');
-var SwipeableDrawer = require('@mui/material/SwipeableDrawer');
-var List = require('@mui/material/List');
-var ListItem = require('@mui/material/ListItem');
-var ListItemButton = require('@mui/material/ListItemButton');
-var ListItemText = require('@mui/material/ListItemText');
-var ListItemAvatar = require('@mui/material/ListItemAvatar');
-var Avatar = require('@mui/material/Avatar');
-var Checkbox = require('@mui/material/Checkbox');
-var Stepper = require('@mui/material/Stepper');
-var Button = require('@mui/material/Button');
-var Paper = require('@mui/material/Paper');
-
-function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
-
-var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
-var Typography__default = /*#__PURE__*/_interopDefaultLegacy(Typography);
-var Drawer__default = /*#__PURE__*/_interopDefaultLegacy(Drawer);
-var SwipeableDrawer__default = /*#__PURE__*/_interopDefaultLegacy(SwipeableDrawer);
-var List__default = /*#__PURE__*/_interopDefaultLegacy(List);
-var ListItem__default = /*#__PURE__*/_interopDefaultLegacy(ListItem);
-var ListItemButton__default = /*#__PURE__*/_interopDefaultLegacy(ListItemButton);
-var ListItemText__default = /*#__PURE__*/_interopDefaultLegacy(ListItemText);
-var ListItemAvatar__default = /*#__PURE__*/_interopDefaultLegacy(ListItemAvatar);
-var Avatar__default = /*#__PURE__*/_interopDefaultLegacy(Avatar);
-var Checkbox__default = /*#__PURE__*/_interopDefaultLegacy(Checkbox);
-var Stepper__default = /*#__PURE__*/_interopDefaultLegacy(Stepper);
-var Button__default = /*#__PURE__*/_interopDefaultLegacy(Button);
-var Paper__default = /*#__PURE__*/_interopDefaultLegacy(Paper);
-
->>>>>>> POPR-155 Eliminate generic stepper from app
 function Header() {
     return React__default["default"].createElement(Typography__default["default"], { variant: "h3" }, "Popr.ai");
 }
@@ -145,11 +74,11 @@ function __makeTemplateObject(cooked, raw) {
     return cooked;
 }
 
-var LargeDeviceDrawer = styles.styled(Drawer__default["default"])(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  flexshrink: 0;\n  & .MuiDrawer-paper {\n    width: 33.6rem;\n    border-right: none;\n    background: white;\n  }\n"], ["\n  flexshrink: 0;\n  & .MuiDrawer-paper {\n    width: 33.6rem;\n    border-right: none;\n    background: white;\n  }\n"])));
+var LargeDeviceDrawer = styles.styled(Drawer__default["default"])(templateObject_1$2 || (templateObject_1$2 = __makeTemplateObject(["\n  flex-shrink: 0;\n  width: 33.6rem;\n  & .MuiDrawer-paper {\n    width: 33.6rem;\n    border-right: none;\n    background: white;\n  }\n"], ["\n  flex-shrink: 0;\n  width: 33.6rem;\n  & .MuiDrawer-paper {\n    width: 33.6rem;\n    border-right: none;\n    background: white;\n  }\n"])));
 var Puller = styles.styled(material.Button)(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  width: 1.875rem;\n  height: 0.375rem;\n  background-color: #451d53;\n  border-radius: 3rem;\n  left: calc(50% - 30px);\n  &:hover {\n    background-color: #8c29af;\n  }\n"], ["\n  width: 1.875rem;\n  height: 0.375rem;\n  background-color: #451d53;\n  border-radius: 3rem;\n  left: calc(50% - 30px);\n  &:hover {\n    background-color: #8c29af;\n  }\n"])));
 var DrawerOpenBox = styles.styled(material.Box)(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  height: 3rem;\n  top: -100px;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n"], ["\n  height: 3rem;\n  top: -100px;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n"])));
-var DrawerClosedBox = styles.styled(material.Box)(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  height: 3rem;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n  position: absolute;\n  bottom: 0;\n"], ["\n  height: 3rem;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n  position: absolute;\n  bottom: 0;\n"])));
-var templateObject_1, templateObject_2, templateObject_3, templateObject_4;
+var DrawerClosedBox = styles.styled(material.Box)(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  height: 3rem;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n  position: absolute;\n  bottom: 0;\n  z-index: 1;\n"], ["\n  height: 3rem;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n  position: absolute;\n  bottom: 0;\n  z-index: 1;\n"])));
+var templateObject_1$2, templateObject_2, templateObject_3, templateObject_4;
 
 var SmallDeviceDrawer = function (_a) {
     var children = _a.children;
@@ -170,7 +99,29 @@ var SmallDeviceDrawer = function (_a) {
 
 var StepperDrawer = function (_a) {
     var children = _a.children, isSmallDevice = _a.isSmallDevice;
-    return isSmallDevice ? (React__default["default"].createElement(SmallDeviceDrawer, null, children)) : (React__default["default"].createElement(LargeDeviceDrawer, { variant: "persistent", open: true }, children));
+    return isSmallDevice ? (React__default["default"].createElement(SmallDeviceDrawer, null, children)) : (React__default["default"].createElement(LargeDeviceDrawer, { variant: "permanent" }, children));
+};
+
+var CardContainer = styles.styled(Card__default["default"])(templateObject_1$1 || (templateObject_1$1 = __makeTemplateObject(["\n  width: 25rem;\n  height: 25rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  box-shadow: none;\n"], ["\n  width: 25rem;\n  height: 25rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  box-shadow: none;\n"])));
+var templateObject_1$1;
+
+var Slide = function (_a) {
+    var header = _a.header, main = _a.main, footer = _a.footer;
+    return (React__default["default"].createElement(CardContainer, null,
+        React__default["default"].createElement(CardContent__default["default"], null,
+            React__default["default"].createElement(Typography__default["default"], { variant: "body2", color: "text.secondary" }, header)),
+        React__default["default"].createElement(CardContent__default["default"], null,
+            React__default["default"].createElement(Typography__default["default"], { variant: "body2", color: "text.secondary" }, main)),
+        React__default["default"].createElement(CardContent__default["default"], null,
+            React__default["default"].createElement(Typography__default["default"], { variant: "body2", color: "text.secondary" }, footer))));
+};
+
+var PreviewLayoutBox = styles.styled(material.Box)(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  background: #e6e6e6;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-self: end;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  overflow-y: scroll;\n"], ["\n  background: #e6e6e6;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-self: end;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  overflow-y: scroll;\n"])));
+var templateObject_1;
+
+var PreviewLayoutContainer = function (_a) {
+    var children = _a.children;
+    return React__default["default"].createElement(PreviewLayoutBox, null, children);
 };
 
 var ContactCompanyList = function (_a) {
@@ -229,49 +180,6 @@ var ContactList = function (_a) {
         } }, haveAnyContacts ? (contacts === null || contacts === void 0 ? void 0 : contacts.map(function (contact, index) {
         return (React__default["default"].createElement(ContactListItem, { onChange: handleToggle, checked: checked, index: index, contact: contact }));
     })) : (React__default["default"].createElement(Typography__default["default"], { variant: "h6" }, "No contacts yet..."))));
-<<<<<<< HEAD
-<<<<<<< HEAD
-};
-
-var LargeDeviceDrawer = styles.styled(Drawer__default["default"])(templateObject_1$2 || (templateObject_1$2 = __makeTemplateObject(["\n  flex-shrink: 0;\n  width: 33.6rem;\n  & .MuiDrawer-paper {\n    width: 33.6rem;\n    border-right: none;\n    background: white;\n  }\n"], ["\n  flex-shrink: 0;\n  width: 33.6rem;\n  & .MuiDrawer-paper {\n    width: 33.6rem;\n    border-right: none;\n    background: white;\n  }\n"])));
-var Puller = styles.styled(material.Button)(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  width: 1.875rem;\n  height: 0.375rem;\n  background-color: #451d53;\n  border-radius: 3rem;\n  left: calc(50% - 30px);\n  &:hover {\n    background-color: #8c29af;\n  }\n"], ["\n  width: 1.875rem;\n  height: 0.375rem;\n  background-color: #451d53;\n  border-radius: 3rem;\n  left: calc(50% - 30px);\n  &:hover {\n    background-color: #8c29af;\n  }\n"])));
-var DrawerOpenBox = styles.styled(material.Box)(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  height: 3rem;\n  top: -100px;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n"], ["\n  height: 3rem;\n  top: -100px;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n"])));
-var DrawerClosedBox = styles.styled(material.Box)(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  height: 3rem;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n  position: absolute;\n  bottom: 0;\n  z-index: 1;\n"], ["\n  height: 3rem;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n  position: absolute;\n  bottom: 0;\n  z-index: 1;\n"])));
-var templateObject_1$2, templateObject_2, templateObject_3, templateObject_4;
-
-=======
-};
-
-var LargeDeviceDrawer = styles.styled(Drawer__default["default"])(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  flexshrink: 0;\n  & .MuiDrawer-paper {\n    width: 33.6rem;\n    border-right: none;\n    background: white;\n  }\n"], ["\n  flexshrink: 0;\n  & .MuiDrawer-paper {\n    width: 33.6rem;\n    border-right: none;\n    background: white;\n  }\n"])));
-var Puller = styles.styled(material.Button)(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  width: 1.875rem;\n  height: 0.375rem;\n  background-color: #451d53;\n  border-radius: 3rem;\n  left: calc(50% - 30px);\n  &:hover {\n    background-color: #8c29af;\n  }\n"], ["\n  width: 1.875rem;\n  height: 0.375rem;\n  background-color: #451d53;\n  border-radius: 3rem;\n  left: calc(50% - 30px);\n  &:hover {\n    background-color: #8c29af;\n  }\n"])));
-var DrawerOpenBox = styles.styled(material.Box)(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  height: 3rem;\n  top: -100px;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n"], ["\n  height: 3rem;\n  top: -100px;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n"])));
-var DrawerClosedBox = styles.styled(material.Box)(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  height: 3rem;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n  position: absolute;\n  bottom: 0;\n"], ["\n  height: 3rem;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n  position: absolute;\n  bottom: 0;\n"])));
-var templateObject_1, templateObject_2, templateObject_3, templateObject_4;
-
->>>>>>> material ui stepper functioning
-var SmallDeviceDrawer = function (_a) {
-    var children = _a.children;
-    var _b = React__default["default"].useState(false), open = _b[0], setOpen = _b[1];
-    var toggleDrawer = function (newOpen) { return function () {
-        setOpen(newOpen);
-    }; };
-    return (React__default["default"].createElement(React__default["default"].Fragment, null,
-        React__default["default"].createElement(DrawerClosedBox, null,
-            React__default["default"].createElement(Puller, { onClick: toggleDrawer(true) })),
-        React__default["default"].createElement(SwipeableDrawer__default["default"], { anchor: "bottom", open: open, onClose: toggleDrawer(false), onOpen: toggleDrawer(true), disableSwipeToOpen: false, ModalProps: {
-                keepMounted: true
-            } },
-            React__default["default"].createElement(DrawerOpenBox, null,
-                React__default["default"].createElement(Puller, { onClick: toggleDrawer(false) })),
-            children)));
-};
-
-var StepperDrawer = function (_a) {
-    var children = _a.children, isSmallDevice = _a.isSmallDevice;
-    return isSmallDevice ? (React__default["default"].createElement(SmallDeviceDrawer, null, children)) : (React__default["default"].createElement(LargeDeviceDrawer, { variant: "permanent" }, children));
-};
-
-=======
 };
 
 var StepperButtons = function (_a) {
@@ -280,16 +188,9 @@ var StepperButtons = function (_a) {
     return (React__default["default"].createElement(material.Box, { sx: { mb: 2 } },
         React__default["default"].createElement("div", null,
             React__default["default"].createElement(material.Button, { disabled: index === 0, onClick: handleBack, sx: { mt: 1, mr: 1 } }, "Back"),
-<<<<<<< HEAD
-            React__default["default"].createElement(material.Button, { variant: "contained", onClick: handleNext, sx: { mt: 1, mr: 1 } }, index === stepLength - 1 ? "Save" : "Continue"))));
-};
-
->>>>>>> POPR-155 Eliminate generic stepper from app
-=======
             React__default["default"].createElement(material.Button, { variant: "contained", onClick: handleNext, sx: { mt: 1, mr: 1 } }, showContinueOrSave))));
 };
 
->>>>>>> POPR-155 move condition to const
 var StepChild = function (_a) {
     var step = _a.step, handleNext = _a.handleNext, handleBack = _a.handleBack, index = _a.index, stepLength = _a.stepLength;
     return (React__default["default"].createElement(React__default["default"].Fragment, null,
@@ -318,19 +219,11 @@ var GenericStepper = function (_a) {
         activeStep === steps.length && (React__default["default"].createElement(Paper__default["default"], { square: true, elevation: 0, sx: { p: 3 } },
             React__default["default"].createElement(Typography__default["default"], null, "All steps completed - you're finished"),
             React__default["default"].createElement(Button__default["default"], { onClick: handleReset, sx: { mt: 1, mr: 1 } }, "Reset")))));
-<<<<<<< HEAD
-};
-
-exports.ContactList = ContactList;
-exports.Header = Header;
-exports.PreviewLayoutContainer = PreviewLayoutContainer;
-exports.Slide = Slide;
-exports.StepperDrawer = StepperDrawer;
-=======
 };
 
 exports.ContactList = ContactList;
 exports.GenericStepper = GenericStepper;
 exports.Header = Header;
+exports.PreviewLayoutContainer = PreviewLayoutContainer;
+exports.Slide = Slide;
 exports.StepperDrawer = StepperDrawer;
->>>>>>> POPR-155 Eliminate generic stepper from app
