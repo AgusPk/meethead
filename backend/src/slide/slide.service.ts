@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { CreateSlideDTO } from '@meethead/types';
+import { CreateSlideDTO } from '@popr/types';
 import { UpdateSlideDTO } from './dto/update-slide.dto';
 import { InjectModel } from '@nestjs/mongoose';
 import {
