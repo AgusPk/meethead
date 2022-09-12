@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { ResponseContactDTO } from "@popr/types";
+import { ResponseContactDTO } from "@popr-project/types";
 export declare const ContactList: FC<{
-    contacts: ResponseContactDTO[];
+  contacts: ResponseContactDTO[];
 }>;

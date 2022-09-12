@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import List from "@mui/material/List";
 import { ContactListItem } from "./ContactListItem";
 import Typography from "@mui/material/Typography";
-import { ResponseContactDTO } from "@popr/types";
+import { ResponseContactDTO } from "@popr-project/types";
 
 export const ContactList: FC<{ contacts: ResponseContactDTO[] }> = ({
   contacts,

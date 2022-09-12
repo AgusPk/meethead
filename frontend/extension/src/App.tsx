@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { CreateContactDTO } from '@popr/types';
+import { CreateContactDTO } from '@popr-project/types';
 import { Header } from '@popr/ui';
 
 function App() {

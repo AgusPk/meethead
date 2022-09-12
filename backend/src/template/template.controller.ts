@@ -8,7 +8,7 @@ import {
   Delete,
 } from '@nestjs/common';
 import { TemplateService } from './template.service';
-import { CreateTemplateDTO } from '@popr/types';
+import { CreateTemplateDTO } from '@popr-project/types';
 import { UpdateTemplateDTO } from './dto/update-template.dto';
 import { Template } from './schemas/template.schema';
 

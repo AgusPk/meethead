@@ -1,11 +1,14 @@
 {
   "name": "meethead",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"npm run start -w=@popr/app\" \"npm run start -w=@popr/ui\" \"npm run start -w=@popr/types\" \"npm run start:dev -w=backend\""
+    "start": "concurrently \"npm run start -w=@popr/app\" \"npm run start -w=@popr/ui\" \"npm run start -w=@popr-project/types\" \"npm run start:dev -w=backend\""
+  },
+  "engines": {
+    "node": "16.17.0"
   },
   "author": "",
   "license": "ISC",

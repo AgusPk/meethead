@@ -1,5 +1,5 @@
 {
-  "name": "@popr/types",
+  "name": "@popr-project/types",
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
@@ -11,5 +11,9 @@
     "rollup-plugin-typescript2": "^0.31.1",
     "tslib": "^2.3.1",
     "typescript": "^4.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AgusPk/meethead.git"
   }
 }

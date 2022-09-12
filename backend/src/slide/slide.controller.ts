@@ -8,7 +8,7 @@ import {
   Delete,
 } from '@nestjs/common';
 import { SlideService } from './slide.service';
-import { CreateSlideDTO } from '@popr/types';
+import { CreateSlideDTO } from '@popr-project/types';
 import { UpdateSlideDTO } from './dto/update-slide.dto';
 import { Template } from 'src/template/schemas/template.schema';
 

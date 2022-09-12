@@ -1,0 +1,25 @@
+name: Publish Package to npmjs
+on:
+  push:
+    branches:
+      - feature/POPR-153_github-actions
+    paths:
+      - "types/**"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      # Setup .npmrc file to publish to npm
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@popr-project"
+      - run: npm ci -w=@popr-project/types
+      - run: npm publish -w=@popr-project/types
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

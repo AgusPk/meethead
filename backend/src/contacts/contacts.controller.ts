@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { User } from 'src/user/schemas/user.schema';
 import { ContactsService } from './contacts.service';
-import { CreateContactDTO, ResponseContactDTO } from '@popr/types';
+import { CreateContactDTO, ResponseContactDTO } from '@popr-project/types';
 
 @Controller('contacts/')
 export class ContactsController {

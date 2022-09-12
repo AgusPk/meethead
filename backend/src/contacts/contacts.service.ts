@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { User, UserDocument } from 'src/user/schemas/user.schema';
-import { CreateContactDTO } from '@popr/types';
+import { CreateContactDTO } from '@popr-project/types';
 
 @Injectable()
 export class ContactsService {
