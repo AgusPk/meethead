@@ -9,6 +9,6 @@ export const PreviewLayoutBox = styled(Box)`
   align-self: end;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   overflow-y: scroll;
 `;

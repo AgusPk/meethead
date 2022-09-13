@@ -1,18 +1,34 @@
-import React, { FC, ReactNode } from 'react';
-import { PreviewLayoutContainer } from '@popr/ui';
-
-import { useTranslation } from 'react-i18next';
+import React, { FC, ReactNode, useState } from 'react';
+import { PreviewLayoutContainer, Slide } from '@popr/ui';
+import AddIcon from '@mui/icons-material/Add';
+import { GeneralIconButton } from '@popr/ui';
 
 type PreviewLayout = {
   children?: ReactNode;
 };
 
 const PreviewLayout: FC<PreviewLayout> = () => {
-  const { t } = useTranslation(['config', 'translations']);
+  const exampleSlide = { header: 'header', main: 'some text', footer: 'footer' };
+  const [slides, setSlides] = useState([exampleSlide]);
+
+  const addSlide = () => {
+    setSlides([...slides, exampleSlide]);
+  };
+
+  const showSlides = () => {
+    return slides.map((slide, index) => {
+      return <Slide key={index} header={slide.header} main={slide.header} footer={slide.footer} />;
+    });
+  };
 
   return (
     <PreviewLayoutContainer>
-      <h1>{t('app.title')}</h1>
+      <>
+        {showSlides()}
+        <GeneralIconButton onClick={addSlide}>
+          <AddIcon />
+        </GeneralIconButton>
+      </>
     </PreviewLayoutContainer>
   );
 };

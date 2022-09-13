@@ -229,6 +229,7 @@ var theme = styles.createTheme({
 });
 
 exports.ContactList = ContactList;
+exports.GeneralIconButton = GeneralIconButton;
 exports.GenericStepper = GenericStepper;
 exports.Header = Header;
 exports.PreviewLayoutContainer = PreviewLayoutContainer;
