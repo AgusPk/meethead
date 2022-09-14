@@ -5,5 +5,9 @@ export const GeneralIconButton: FC<{
   children: React.ReactNode;
   onClick: any;
 }> = ({ children, onClick }) => {
-  return <StyledIconButton onClick={onClick}>{children}</StyledIconButton>;
+  return (
+    <StyledIconButton onClick={onClick} size="large">
+      {children}
+    </StyledIconButton>
+  );
 };

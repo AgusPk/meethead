@@ -1,7 +1,9 @@
 import React, { FC, ReactNode, useState } from 'react';
-import { PreviewLayoutContainer, Slide } from '@popr/ui';
+import { PreviewLayoutContainer } from '@popr/ui';
 import AddIcon from '@mui/icons-material/Add';
 import { GeneralIconButton } from '@popr/ui';
+import { Grid } from '@mui/material';
+import SlideList from 'components/SlideList/SlideList';
 
 type PreviewLayout = {
   children?: ReactNode;
@@ -15,20 +17,16 @@ const PreviewLayout: FC<PreviewLayout> = () => {
     setSlides([...slides, exampleSlide]);
   };
 
-  const showSlides = () => {
-    return slides.map((slide, index) => {
-      return <Slide key={index} header={slide.header} main={slide.header} footer={slide.footer} />;
-    });
-  };
-
   return (
     <PreviewLayoutContainer>
-      <>
-        {showSlides()}
-        <GeneralIconButton onClick={addSlide}>
-          <AddIcon />
-        </GeneralIconButton>
-      </>
+      <Grid container spacing={3} direction="column" justifyContent="center" alignItems="center">
+        <SlideList slides={slides} />
+        <Grid item>
+          <GeneralIconButton onClick={addSlide}>
+            <AddIcon />
+          </GeneralIconButton>
+        </Grid>
+      </Grid>
     </PreviewLayoutContainer>
   );
 };
