@@ -10,6 +10,7 @@ export const LargeDeviceDrawer = styled(Drawer)`
     width: 33.6rem;
     border-right: none;
     background: white;
+    padding: 2.5rem;
   }
 `;
 

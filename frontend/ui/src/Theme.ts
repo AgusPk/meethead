@@ -7,4 +7,7 @@ export const theme = createTheme({
       dark: "#C5B9CA",
     },
   },
+  typography: {
+    fontFamily: "Roboto",
+  },
 });

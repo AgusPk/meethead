@@ -5,6 +5,7 @@ import { theme } from '@popr/ui';
 import Loading from 'components/Loading';
 import AppRoutes from 'routes/AppRoutes';
 import ReactQueryProvider from 'providers/ReactQueryProvider';
+import 'theme';
 
 const App: FC = () => (
   <Suspense fallback={<Loading />}>

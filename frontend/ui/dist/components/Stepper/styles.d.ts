@@ -1,0 +1,1 @@
+export declare const StyledStepper: import("@emotion/styled").StyledComponent<import("@mui/material").StepperProps & import("@mui/system").MUIStyledCommonProps<import("@mui/material").Theme>, {}, {}>;

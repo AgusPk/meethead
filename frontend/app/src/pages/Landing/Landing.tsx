@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 import PreviewLayout from 'layouts/PreviewLayout';
-import TemplateDrawer from 'components/TemplateDrawer';
+import PoprDrawer from 'components/PoprDrawer';
 
 const Landing: FC = () => {
   return (
     <>
-      <TemplateDrawer />
-      <PreviewLayout />;
+      <PoprDrawer />
+      <PreviewLayout />
     </>
   );
 };
