@@ -221,9 +221,19 @@ var GenericStepper = function (_a) {
             React__default["default"].createElement(Button__default["default"], { onClick: handleReset, sx: { mt: 1, mr: 1 } }, "Reset")))));
 };
 
+var theme = styles.createTheme({
+    palette: {
+        primary: {
+            main: "#451D53",
+            dark: "#C5B9CA"
+        }
+    }
+});
+
 exports.ContactList = ContactList;
 exports.GenericStepper = GenericStepper;
 exports.Header = Header;
 exports.PreviewLayoutContainer = PreviewLayoutContainer;
 exports.Slide = Slide;
 exports.StepperDrawer = StepperDrawer;
+exports.theme = theme;

@@ -1,22 +1,20 @@
 import React, { FC, Suspense } from 'react';
 import { HashRouter } from 'react-router-dom';
-
-import 'theme';
-
+import { ThemeProvider } from '@mui/material/styles';
+import { theme } from '@popr/ui';
 import Loading from 'components/Loading';
 import AppRoutes from 'routes/AppRoutes';
 import ReactQueryProvider from 'providers/ReactQueryProvider';
-import { toggleTheme } from 'utils/utils';
-
-window.toggleTheme = toggleTheme;
 
 const App: FC = () => (
   <Suspense fallback={<Loading />}>
-    <ReactQueryProvider>
-      <HashRouter>
-        <AppRoutes />
-      </HashRouter>
-    </ReactQueryProvider>
+    <ThemeProvider theme={theme}>
+      <ReactQueryProvider>
+        <HashRouter>
+          <AppRoutes />
+        </HashRouter>
+      </ReactQueryProvider>
+    </ThemeProvider>
   </Suspense>
 );
 
