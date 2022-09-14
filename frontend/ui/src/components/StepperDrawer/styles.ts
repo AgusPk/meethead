@@ -17,12 +17,8 @@ export const LargeDeviceDrawer = styled(Drawer)`
 export const Puller = styled(Button)`
   width: 1.875rem;
   height: 0.375rem;
-  background-color: #451d53;
   border-radius: 3rem;
   left: calc(50% - 30px);
-  &:hover {
-    background-color: #8c29af;
-  }
 `;
 
 export const DrawerOpenBox = styled(Box)`

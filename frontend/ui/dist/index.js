@@ -7,7 +7,6 @@ var Typography = require('@mui/material/Typography');
 var styles = require('@mui/material/styles');
 var Drawer = require('@mui/material/Drawer');
 var material = require('@mui/material');
-var SwipeableDrawer = require('@mui/material/SwipeableDrawer');
 var CardContent = require('@mui/material/CardContent');
 var Card = require('@mui/material/Card');
 var List = require('@mui/material/List');
@@ -23,7 +22,6 @@ function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'defau
 var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
 var Typography__default = /*#__PURE__*/_interopDefaultLegacy(Typography);
 var Drawer__default = /*#__PURE__*/_interopDefaultLegacy(Drawer);
-var SwipeableDrawer__default = /*#__PURE__*/_interopDefaultLegacy(SwipeableDrawer);
 var CardContent__default = /*#__PURE__*/_interopDefaultLegacy(CardContent);
 var Card__default = /*#__PURE__*/_interopDefaultLegacy(Card);
 var List__default = /*#__PURE__*/_interopDefaultLegacy(List);
@@ -69,7 +67,7 @@ function __makeTemplateObject(cooked, raw) {
 }
 
 var LargeDeviceDrawer = styles.styled(Drawer__default["default"])(templateObject_1$3 || (templateObject_1$3 = __makeTemplateObject(["\n  flex-shrink: 0;\n  width: 33.6rem;\n  & .MuiDrawer-paper {\n    width: 33.6rem;\n    border-right: none;\n    background: white;\n    padding: 2.5rem;\n  }\n"], ["\n  flex-shrink: 0;\n  width: 33.6rem;\n  & .MuiDrawer-paper {\n    width: 33.6rem;\n    border-right: none;\n    background: white;\n    padding: 2.5rem;\n  }\n"])));
-var Puller = styles.styled(material.Button)(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  width: 1.875rem;\n  height: 0.375rem;\n  background-color: #451d53;\n  border-radius: 3rem;\n  left: calc(50% - 30px);\n  &:hover {\n    background-color: #8c29af;\n  }\n"], ["\n  width: 1.875rem;\n  height: 0.375rem;\n  background-color: #451d53;\n  border-radius: 3rem;\n  left: calc(50% - 30px);\n  &:hover {\n    background-color: #8c29af;\n  }\n"])));
+var Puller = styles.styled(material.Button)(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  width: 1.875rem;\n  height: 0.375rem;\n  border-radius: 3rem;\n  left: calc(50% - 30px);\n"], ["\n  width: 1.875rem;\n  height: 0.375rem;\n  border-radius: 3rem;\n  left: calc(50% - 30px);\n"])));
 var DrawerOpenBox = styles.styled(material.Box)(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  height: 3rem;\n  top: -100px;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n"], ["\n  height: 3rem;\n  top: -100px;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n"])));
 var DrawerClosedBox = styles.styled(material.Box)(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  height: 3rem;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n  position: absolute;\n  bottom: 0;\n  z-index: 1;\n"], ["\n  height: 3rem;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n  position: absolute;\n  bottom: 0;\n  z-index: 1;\n"])));
 var templateObject_1$3, templateObject_2, templateObject_3, templateObject_4;
@@ -82,13 +80,13 @@ var SmallDeviceDrawer = function (_a) {
     }; };
     return (React__default["default"].createElement(React__default["default"].Fragment, null,
         React__default["default"].createElement(DrawerClosedBox, null,
-            React__default["default"].createElement(Puller, { onClick: toggleDrawer(true) })),
-        React__default["default"].createElement(SwipeableDrawer__default["default"], { anchor: "bottom", open: open, onClose: toggleDrawer(false), onOpen: toggleDrawer(true), disableSwipeToOpen: false, ModalProps: {
+            React__default["default"].createElement(Puller, { variant: "contained", onClick: toggleDrawer(true) })),
+        React__default["default"].createElement(material.SwipeableDrawer, { anchor: "bottom", open: open, onClose: toggleDrawer(false), onOpen: toggleDrawer(true), disableSwipeToOpen: false, ModalProps: {
                 keepMounted: true
             } },
             React__default["default"].createElement(DrawerOpenBox, null,
-                React__default["default"].createElement(Puller, { onClick: toggleDrawer(false) })),
-            children)));
+                React__default["default"].createElement(Puller, { variant: "contained", onClick: toggleDrawer(false) })),
+            React__default["default"].createElement(material.Box, { p: 3 }, children))));
 };
 
 var StepperDrawer = function (_a) {
