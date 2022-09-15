@@ -7,7 +7,6 @@ var Typography = require('@mui/material/Typography');
 var styles = require('@mui/material/styles');
 var Drawer = require('@mui/material/Drawer');
 var material = require('@mui/material');
-var SwipeableDrawer = require('@mui/material/SwipeableDrawer');
 var CardContent = require('@mui/material/CardContent');
 var Card = require('@mui/material/Card');
 var List = require('@mui/material/List');
@@ -17,16 +16,12 @@ var ListItemText = require('@mui/material/ListItemText');
 var ListItemAvatar = require('@mui/material/ListItemAvatar');
 var Avatar = require('@mui/material/Avatar');
 var Checkbox = require('@mui/material/Checkbox');
-var Stepper = require('@mui/material/Stepper');
-var Button = require('@mui/material/Button');
-var Paper = require('@mui/material/Paper');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
 var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
 var Typography__default = /*#__PURE__*/_interopDefaultLegacy(Typography);
 var Drawer__default = /*#__PURE__*/_interopDefaultLegacy(Drawer);
-var SwipeableDrawer__default = /*#__PURE__*/_interopDefaultLegacy(SwipeableDrawer);
 var CardContent__default = /*#__PURE__*/_interopDefaultLegacy(CardContent);
 var Card__default = /*#__PURE__*/_interopDefaultLegacy(Card);
 var List__default = /*#__PURE__*/_interopDefaultLegacy(List);
@@ -36,9 +31,6 @@ var ListItemText__default = /*#__PURE__*/_interopDefaultLegacy(ListItemText);
 var ListItemAvatar__default = /*#__PURE__*/_interopDefaultLegacy(ListItemAvatar);
 var Avatar__default = /*#__PURE__*/_interopDefaultLegacy(Avatar);
 var Checkbox__default = /*#__PURE__*/_interopDefaultLegacy(Checkbox);
-var Stepper__default = /*#__PURE__*/_interopDefaultLegacy(Stepper);
-var Button__default = /*#__PURE__*/_interopDefaultLegacy(Button);
-var Paper__default = /*#__PURE__*/_interopDefaultLegacy(Paper);
 
 function Header() {
     return React__default["default"].createElement(Typography__default["default"], { variant: "h3" }, "Popr.ai");
@@ -74,11 +66,11 @@ function __makeTemplateObject(cooked, raw) {
     return cooked;
 }
 
-var LargeDeviceDrawer = styles.styled(Drawer__default["default"])(templateObject_1$2 || (templateObject_1$2 = __makeTemplateObject(["\n  flex-shrink: 0;\n  width: 33.6rem;\n  & .MuiDrawer-paper {\n    width: 33.6rem;\n    border-right: none;\n    background: white;\n  }\n"], ["\n  flex-shrink: 0;\n  width: 33.6rem;\n  & .MuiDrawer-paper {\n    width: 33.6rem;\n    border-right: none;\n    background: white;\n  }\n"])));
-var Puller = styles.styled(material.Button)(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  width: 1.875rem;\n  height: 0.375rem;\n  background-color: #451d53;\n  border-radius: 3rem;\n  left: calc(50% - 30px);\n  &:hover {\n    background-color: #8c29af;\n  }\n"], ["\n  width: 1.875rem;\n  height: 0.375rem;\n  background-color: #451d53;\n  border-radius: 3rem;\n  left: calc(50% - 30px);\n  &:hover {\n    background-color: #8c29af;\n  }\n"])));
+var LargeDeviceDrawer = styles.styled(Drawer__default["default"])(templateObject_1$3 || (templateObject_1$3 = __makeTemplateObject(["\n  flex-shrink: 0;\n  width: 33.6rem;\n  & .MuiDrawer-paper {\n    width: 33.6rem;\n    border-right: none;\n    background: white;\n    padding: 2.5rem;\n  }\n"], ["\n  flex-shrink: 0;\n  width: 33.6rem;\n  & .MuiDrawer-paper {\n    width: 33.6rem;\n    border-right: none;\n    background: white;\n    padding: 2.5rem;\n  }\n"])));
+var Puller = styles.styled(material.Button)(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  width: 1.875rem;\n  height: 0.375rem;\n  border-radius: 3rem;\n  left: calc(50% - 30px);\n"], ["\n  width: 1.875rem;\n  height: 0.375rem;\n  border-radius: 3rem;\n  left: calc(50% - 30px);\n"])));
 var DrawerOpenBox = styles.styled(material.Box)(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  height: 3rem;\n  top: -100px;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n"], ["\n  height: 3rem;\n  top: -100px;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n"])));
 var DrawerClosedBox = styles.styled(material.Box)(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  height: 3rem;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n  position: absolute;\n  bottom: 0;\n  z-index: 1;\n"], ["\n  height: 3rem;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n  position: absolute;\n  bottom: 0;\n  z-index: 1;\n"])));
-var templateObject_1$2, templateObject_2, templateObject_3, templateObject_4;
+var templateObject_1$3, templateObject_2, templateObject_3, templateObject_4;
 
 var SmallDeviceDrawer = function (_a) {
     var children = _a.children;
@@ -88,13 +80,13 @@ var SmallDeviceDrawer = function (_a) {
     }; };
     return (React__default["default"].createElement(React__default["default"].Fragment, null,
         React__default["default"].createElement(DrawerClosedBox, null,
-            React__default["default"].createElement(Puller, { onClick: toggleDrawer(true) })),
-        React__default["default"].createElement(SwipeableDrawer__default["default"], { anchor: "bottom", open: open, onClose: toggleDrawer(false), onOpen: toggleDrawer(true), disableSwipeToOpen: false, ModalProps: {
+            React__default["default"].createElement(Puller, { variant: "contained", onClick: toggleDrawer(true) })),
+        React__default["default"].createElement(material.SwipeableDrawer, { anchor: "bottom", open: open, onClose: toggleDrawer(false), onOpen: toggleDrawer(true), disableSwipeToOpen: false, ModalProps: {
                 keepMounted: true
             } },
             React__default["default"].createElement(DrawerOpenBox, null,
-                React__default["default"].createElement(Puller, { onClick: toggleDrawer(false) })),
-            children)));
+                React__default["default"].createElement(Puller, { variant: "contained", onClick: toggleDrawer(false) })),
+            React__default["default"].createElement(material.Box, { p: 3 }, children))));
 };
 
 var StepperDrawer = function (_a) {
@@ -102,8 +94,8 @@ var StepperDrawer = function (_a) {
     return isSmallDevice ? (React__default["default"].createElement(SmallDeviceDrawer, null, children)) : (React__default["default"].createElement(LargeDeviceDrawer, { variant: "permanent" }, children));
 };
 
-var CardContainer = styles.styled(Card__default["default"])(templateObject_1$1 || (templateObject_1$1 = __makeTemplateObject(["\n  width: 25rem;\n  height: 25rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  box-shadow: none;\n"], ["\n  width: 25rem;\n  height: 25rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  box-shadow: none;\n"])));
-var templateObject_1$1;
+var CardContainer = styles.styled(Card__default["default"])(templateObject_1$2 || (templateObject_1$2 = __makeTemplateObject(["\n  width: 25rem;\n  height: 25rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  box-shadow: none;\n"], ["\n  width: 25rem;\n  height: 25rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  box-shadow: none;\n"])));
+var templateObject_1$2;
 
 var Slide = function (_a) {
     var header = _a.header, main = _a.main, footer = _a.footer;
@@ -116,8 +108,8 @@ var Slide = function (_a) {
             React__default["default"].createElement(Typography__default["default"], { variant: "body2", color: "text.secondary" }, footer))));
 };
 
-var PreviewLayoutBox = styles.styled(material.Box)(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  background: #e6e6e6;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-self: end;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  overflow-y: scroll;\n"], ["\n  background: #e6e6e6;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-self: end;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  overflow-y: scroll;\n"])));
-var templateObject_1;
+var PreviewLayoutBox = styles.styled(material.Box)(templateObject_1$1 || (templateObject_1$1 = __makeTemplateObject(["\n  background: #e6e6e6;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-self: end;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  overflow-y: scroll;\n"], ["\n  background: #e6e6e6;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-self: end;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  overflow-y: scroll;\n"])));
+var templateObject_1$1;
 
 var PreviewLayoutContainer = function (_a) {
     var children = _a.children;
@@ -201,6 +193,9 @@ var StepChild = function (_a) {
             React__default["default"].createElement(StepperButtons, { handleNext: handleNext, handleBack: handleBack, index: index, stepLength: stepLength }))));
 };
 
+var StyledStepper = styles.styled(material.Stepper)(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  & .MuiStepContent-root {\n    border: none;\n  }\n"], ["\n  & .MuiStepContent-root {\n    border: none;\n  }\n"])));
+var templateObject_1;
+
 var GenericStepper = function (_a) {
     var steps = _a.steps;
     var _b = React__default["default"].useState(0), activeStep = _b[0], setActiveStep = _b[1];
@@ -214,16 +209,30 @@ var GenericStepper = function (_a) {
         setActiveStep(0);
     };
     return (React__default["default"].createElement(material.Box, { sx: { maxWidth: 400 } },
-        React__default["default"].createElement(Stepper__default["default"], { activeStep: activeStep, orientation: "vertical" }, steps.map(function (step, index) { return (React__default["default"].createElement(material.Step, { key: step.label },
+        React__default["default"].createElement(StyledStepper, { activeStep: activeStep, orientation: "vertical", connector: null }, steps.map(function (step, index) { return (React__default["default"].createElement(material.Step, { key: step.label },
             React__default["default"].createElement(StepChild, { step: step, handleNext: handleNext, handleBack: handleBack, index: index, stepLength: steps.length }))); })),
-        activeStep === steps.length && (React__default["default"].createElement(Paper__default["default"], { square: true, elevation: 0, sx: { p: 3 } },
-            React__default["default"].createElement(Typography__default["default"], null, "All steps completed - you're finished"),
-            React__default["default"].createElement(Button__default["default"], { onClick: handleReset, sx: { mt: 1, mr: 1 } }, "Reset")))));
+        activeStep === steps.length && (React__default["default"].createElement(material.Paper, { square: true, elevation: 0, sx: { p: 3 } },
+            React__default["default"].createElement(material.Typography, null, "All steps completed - you're finished"),
+            React__default["default"].createElement(material.Button, { onClick: handleReset, sx: { mt: 1, mr: 1 } }, "Reset")))));
 };
+
+var theme = styles.createTheme({
+    palette: {
+        primary: {
+            main: "#451D53",
+            dark: "#C5B9CA"
+        }
+    },
+    typography: {
+        fontFamily: "Roboto"
+    }
+});
 
 exports.ContactList = ContactList;
 exports.GenericStepper = GenericStepper;
 exports.Header = Header;
 exports.PreviewLayoutContainer = PreviewLayoutContainer;
 exports.Slide = Slide;
+exports.StepChild = StepChild;
 exports.StepperDrawer = StepperDrawer;
+exports.theme = theme;

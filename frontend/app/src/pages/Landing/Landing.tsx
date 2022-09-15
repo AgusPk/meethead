@@ -1,16 +1,11 @@
 import React, { FC } from 'react';
-import { StepperDrawer } from '@popr/ui';
-import { useIsSmallDevice } from 'hooks/useWindowSize/index';
 import PreviewLayout from 'layouts/PreviewLayout';
+import PoprDrawer from 'components/PoprDrawer';
 
 const Landing: FC = () => {
-  const isSmallDevice = useIsSmallDevice();
-
   return (
     <>
-      <StepperDrawer isSmallDevice={isSmallDevice}>
-        <h2>drawer</h2>
-      </StepperDrawer>
+      <PoprDrawer />
       <PreviewLayout />
     </>
   );

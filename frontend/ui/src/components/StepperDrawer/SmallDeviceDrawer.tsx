@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { Puller, DrawerOpenBox, DrawerClosedBox } from "./styles";
-import SwipeableDrawer from "@mui/material/SwipeableDrawer";
+import { SwipeableDrawer, Box } from "@mui/material";
 
 export const SmallDeviceDrawer: FC<{
   children: React.ReactNode;
@@ -14,7 +14,7 @@ export const SmallDeviceDrawer: FC<{
   return (
     <>
       <DrawerClosedBox>
-        <Puller onClick={toggleDrawer(true)} />
+        <Puller variant="contained" onClick={toggleDrawer(true)} />
       </DrawerClosedBox>
       <SwipeableDrawer
         anchor="bottom"
@@ -27,9 +27,9 @@ export const SmallDeviceDrawer: FC<{
         }}
       >
         <DrawerOpenBox>
-          <Puller onClick={toggleDrawer(false)} />
+          <Puller variant="contained" onClick={toggleDrawer(false)} />
         </DrawerOpenBox>
-        {children}
+        <Box p={3}>{children}</Box>
       </SwipeableDrawer>
     </>
   );
