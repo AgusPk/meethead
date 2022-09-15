@@ -6,3 +6,4 @@ export { ContactList } from "./components/ContactList/ContactList";
 export { GenericStepper } from "./components/Stepper/GenericStepper";
 export { StepChild } from "./components/Stepper/StepChild";
 export { theme } from "./Theme";
+export { GeneralIconButton } from "./components/GeneralIconButton/GeneralIconButton";

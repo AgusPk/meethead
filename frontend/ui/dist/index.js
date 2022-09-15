@@ -70,7 +70,7 @@ var LargeDeviceDrawer = styles.styled(Drawer__default["default"])(templateObject
 var Puller = styles.styled(material.Button)(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  width: 1.875rem;\n  height: 0.375rem;\n  border-radius: 3rem;\n  left: calc(50% - 30px);\n"], ["\n  width: 1.875rem;\n  height: 0.375rem;\n  border-radius: 3rem;\n  left: calc(50% - 30px);\n"])));
 var DrawerOpenBox = styles.styled(material.Box)(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  height: 3rem;\n  top: -100px;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n"], ["\n  height: 3rem;\n  top: -100px;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n"])));
 var DrawerClosedBox = styles.styled(material.Box)(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  height: 3rem;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n  position: absolute;\n  bottom: 0;\n  z-index: 1;\n"], ["\n  height: 3rem;\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n  visibility: visible;\n  right: 0;\n  left: 0;\n  position: absolute;\n  bottom: 0;\n  z-index: 1;\n"])));
-var templateObject_1$3, templateObject_2, templateObject_3, templateObject_4;
+var templateObject_1$4, templateObject_2, templateObject_3, templateObject_4;
 
 var SmallDeviceDrawer = function (_a) {
     var children = _a.children;
@@ -94,8 +94,8 @@ var StepperDrawer = function (_a) {
     return isSmallDevice ? (React__default["default"].createElement(SmallDeviceDrawer, null, children)) : (React__default["default"].createElement(LargeDeviceDrawer, { variant: "permanent" }, children));
 };
 
-var CardContainer = styles.styled(Card__default["default"])(templateObject_1$2 || (templateObject_1$2 = __makeTemplateObject(["\n  width: 25rem;\n  height: 25rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  box-shadow: none;\n"], ["\n  width: 25rem;\n  height: 25rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  box-shadow: none;\n"])));
-var templateObject_1$2;
+var CardContainer = styles.styled(Card__default["default"])(templateObject_1$3 || (templateObject_1$3 = __makeTemplateObject(["\n  width: 25rem;\n  height: 25rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  box-shadow: none;\n"], ["\n  width: 25rem;\n  height: 25rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center;\n  box-shadow: none;\n"])));
+var templateObject_1$3;
 
 var Slide = function (_a) {
     var header = _a.header, main = _a.main, footer = _a.footer;
@@ -193,9 +193,6 @@ var StepChild = function (_a) {
             React__default["default"].createElement(StepperButtons, { handleNext: handleNext, handleBack: handleBack, index: index, stepLength: stepLength }))));
 };
 
-var StyledStepper = styles.styled(material.Stepper)(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  & .MuiStepContent-root {\n    border: none;\n  }\n"], ["\n  & .MuiStepContent-root {\n    border: none;\n  }\n"])));
-var templateObject_1;
-
 var GenericStepper = function (_a) {
     var steps = _a.steps;
     var _b = React__default["default"].useState(0), activeStep = _b[0], setActiveStep = _b[1];
@@ -211,9 +208,9 @@ var GenericStepper = function (_a) {
     return (React__default["default"].createElement(material.Box, { sx: { maxWidth: 400 } },
         React__default["default"].createElement(StyledStepper, { activeStep: activeStep, orientation: "vertical", connector: null }, steps.map(function (step, index) { return (React__default["default"].createElement(material.Step, { key: step.label },
             React__default["default"].createElement(StepChild, { step: step, handleNext: handleNext, handleBack: handleBack, index: index, stepLength: steps.length }))); })),
-        activeStep === steps.length && (React__default["default"].createElement(material.Paper, { square: true, elevation: 0, sx: { p: 3 } },
-            React__default["default"].createElement(material.Typography, null, "All steps completed - you're finished"),
-            React__default["default"].createElement(material.Button, { onClick: handleReset, sx: { mt: 1, mr: 1 } }, "Reset")))));
+        activeStep === steps.length && (React__default["default"].createElement(Paper__default["default"], { square: true, elevation: 0, sx: { p: 3 } },
+            React__default["default"].createElement(Typography__default["default"], null, "All steps completed - you're finished"),
+            React__default["default"].createElement(Button__default["default"], { onClick: handleReset, sx: { mt: 1, mr: 1 } }, "Reset")))));
 };
 
 var theme = styles.createTheme({
@@ -229,10 +226,9 @@ var theme = styles.createTheme({
 });
 
 exports.ContactList = ContactList;
+exports.GeneralIconButton = GeneralIconButton;
 exports.GenericStepper = GenericStepper;
 exports.Header = Header;
 exports.PreviewLayoutContainer = PreviewLayoutContainer;
 exports.Slide = Slide;
-exports.StepChild = StepChild;
 exports.StepperDrawer = StepperDrawer;
-exports.theme = theme;
